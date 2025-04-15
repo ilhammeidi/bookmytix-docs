@@ -58,16 +58,13 @@
                 </li>
                 <li><h3>Setup &amp; Installation</h3></li>
                 <li>
-                    <a href="#firebase">Firebase API Setup</a>
+                    <a href="#environment">Environment Setup</a>
                 </li>
                 <li>
                     <a href="#install">Installation &amp; Running App</a>
                 </li>
                 <li>
-                    <a href="#deploy">Deployment</a>
-                </li>
-                <li>
-                    <a href="#offline">Offline Access</a>
+                    <a href="#deploy">Build &amp; Deployment</a>
                 </li>
                 <li>
                     <a href="#shoot">Troubleshooting</a>
@@ -211,165 +208,947 @@
                     <div class="col-lg-10">
                         <h1>Files and Folder Structure</h1>
                         <hr />
-                        <pre>
-├── README.md
-├── analysis_options.yaml
-├── android
-├── assets          # FONTS AND STATIC LOCAL IMAGES LIKE ILLUSTRATIONS, BANNERS, AND LOGOS
-│   ├── fonts
-│   └── images
-├── ios
-├── lib    # THE MAIN FLUTTER SOURCE
-│   ├── app         # HANDLE APP ROUTING FOR EACH SCREEN CATEGORY
-│   │   ├── app_link.dart
-│   │   ├── app_routes.dart
-│   │   ├── routes_auth.dart
-│   │   ├── routes_booking.dart
-│   │   ├── routes_flight.dart
-│   │   ├── routes_payment.dart
-│   │   ├── routes_profile.dart
-│   │   └── routes_ui_collection.dart
-│   ├── constants   # CONSTANT VARIABLES FOR IMAGES, APP NAME, AND ALSO SAMPLE DUMMY DATA
-│   │   ├── dummy_api.dart
-│   │   └── img_api.dart
-│   ├── main.dart
-│   ├── models      # OBJECT STRUCTURE AND DUMMY DATA COLLECTION
-│   │   ├── airport.dart
-│   │   ├── booking.dart
-│   │   ├── category.dart
-│   │   ├── chat.dart
-│   │   ├── city.dart
-│   │   ├── company.dart
-│   │   ├── faq.dart
-│   │   ├── flight_package.dart
-│   │   ├── flight_route.dart
-│   │   ├── general_list.dart
-│   │   ├── list_item.dart
-│   │   ├── news.dart
-│   │   ├── notification.dart
-│   │   ├── plane.dart
-│   │   ├── promo.dart
-│   │   ├── rating.dart
-│   │   ├── reward.dart
-│   │   ├── rewards_history.dart
-│   │   ├── transaction.dart
-│   │   ├── trip.dart
-│   │   ├── user.dart
-│   │   └── voucher.dart
-│   ├── screens       # APP SCREENS AS INDIVIDUAL PAGES OR VIEWS. IT'S CONTAIN RELATED WIDGETS
-│   │   ├── auth
-│   │   ├── booking
-│   │   ├── explore
-│   │   ├── flight
-│   │   ├── home.dart
-│   │   ├── intro
-│   │   ├── messages
-│   │   ├── not_found.dart
-│   │   ├── orders
-│   │   ├── payment
-│   │   ├── profile
-│   │   ├── promo
-│   │   ├── sample_ui
-│   │   └── search
-│   ├── ui              # APP LAYOUT AND THEMING LIKE COLORS, TYPOGRAPHY, AND GLOBAL STYLE
-│   │   ├── layouts
-│   │   └── themes
-│   ├── utils           # FLUTTER UTILITIES AND HELPERS FUNCTIONS
-│   │   ├── animated_slide_horizontal.dart
-│   │   ├── bottom_draggable_sheet.dart
-│   │   ├── check_platforms.dart
-│   │   ├── col_row.dart
-│   │   ├── custom_tooltip.dart
-│   │   ├── expanded_section.dart
-│   │   ├── gallery_viewer.dart
-│   │   ├── grabber_icon.dart
-│   │   ├── image_viewer.dart
-│   │   ├── no_data.dart
-│   │   ├── picker.dart
-│   │   ├── placeholder.dart
-│   │   ├── push_screen.dart
-│   │   └── shimmer_preloader.dart
-│   └── widgets           # FLUTTER WIDGET COLLECTION
-│       ├── action_header
-│       ├── alert_info
-│       ├── app_button
-│       ├── app_input
-│       ├── booking
-│       ├── bottom_nav
-│       ├── cards
-│       ├── chat
-│       ├── counter
-│       ├── decorations
-│       ├── explore
-│       ├── flight
-│       ├── home
-│       ├── notifications
-│       ├── payment
-│       ├── profile
-│       ├── promo
-│       ├── review
-│       ├── search_filter
-│       ├── settings
-│       ├── stepper
-│       ├── tab_menu
-│       ├── title
-│       └── user
-├── linux
-├── macos
-├── pubspec.lock
-├── pubspec.yaml
-├── web
-└── windows
-                        </pre>
+                      <div class="directory-tree">
+                          <pre>
+flight_app                          
+  ├── README.md
+  ├── analysis_options.yaml
+  ├── android
+  ├── assets          # FONTS AND STATIC LOCAL IMAGES LIKE ILLUSTRATIONS, BANNERS, AND LOGOS
+  │   ├── fonts
+  │   └── images
+  ├── ios
+  ├── lib    # THE MAIN FLUTTER SOURCE
+  │   ├── app         # HANDLE APP ROUTING FOR EACH SCREEN CATEGORY
+  │   │   ├── app_link.dart
+  │   │   ├── app_routes.dart
+  │   │   ├── routes_auth.dart
+  │   │   ├── routes_booking.dart
+  │   │   ├── routes_flight.dart
+  │   │   ├── routes_payment.dart
+  │   │   ├── routes_profile.dart
+  │   │   └── routes_ui_collection.dart
+  │   ├── constants   # CONSTANT VARIABLES FOR IMAGES, APP NAME, AND ALSO SAMPLE DUMMY DATA
+  │   │   ├── dummy_api.dart
+  │   │   └── img_api.dart
+  │   ├── main.dart
+  │   ├── models      # OBJECT STRUCTURE AND DUMMY DATA COLLECTION
+  │   │   ├── airport.dart
+  │   │   ├── booking.dart
+  │   │   ├── category.dart
+  │   │   ├── chat.dart
+  │   │   ├── city.dart
+  │   │   ├── company.dart
+  │   │   ├── faq.dart
+  │   │   ├── flight_package.dart
+  │   │   ├── flight_route.dart
+  │   │   ├── general_list.dart
+  │   │   ├── list_item.dart
+  │   │   ├── news.dart
+  │   │   ├── notification.dart
+  │   │   ├── plane.dart
+  │   │   ├── promo.dart
+  │   │   ├── rating.dart
+  │   │   ├── reward.dart
+  │   │   ├── rewards_history.dart
+  │   │   ├── transaction.dart
+  │   │   ├── trip.dart
+  │   │   ├── user.dart
+  │   │   └── voucher.dart
+  │   ├── screens       # APP SCREENS AS INDIVIDUAL PAGES OR VIEWS. IT'S CONTAIN RELATED WIDGETS
+  │   │   ├── auth
+  │   │   ├── booking
+  │   │   ├── explore
+  │   │   ├── flight
+  │   │   ├── home.dart
+  │   │   ├── intro
+  │   │   ├── messages
+  │   │   ├── not_found.dart
+  │   │   ├── orders
+  │   │   ├── payment
+  │   │   ├── profile
+  │   │   ├── promo
+  │   │   ├── sample_ui
+  │   │   └── search
+  │   ├── ui              # APP LAYOUT AND THEMING LIKE COLORS, TYPOGRAPHY, AND GLOBAL STYLE
+  │   │   ├── layouts
+  │   │   └── themes
+  │   ├── utils           # FLUTTER UTILITIES AND HELPERS FUNCTIONS
+  │   │   ├── animated_slide_horizontal.dart
+  │   │   ├── bottom_draggable_sheet.dart
+  │   │   ├── check_platforms.dart
+  │   │   ├── col_row.dart
+  │   │   ├── custom_tooltip.dart
+  │   │   ├── expanded_section.dart
+  │   │   ├── gallery_viewer.dart
+  │   │   ├── grabber_icon.dart
+  │   │   ├── image_viewer.dart
+  │   │   ├── no_data.dart
+  │   │   ├── picker.dart
+  │   │   ├── placeholder.dart
+  │   │   ├── push_screen.dart
+  │   │   └── shimmer_preloader.dart
+  │   └── widgets           # FLUTTER WIDGET COLLECTION
+  │       ├── action_header
+  │       ├── alert_info
+  │       ├── app_button
+  │       ├── app_input
+  │       ├── booking
+  │       ├── bottom_nav
+  │       ├── cards
+  │       ├── chat
+  │       ├── counter
+  │       ├── decorations
+  │       ├── explore
+  │       ├── flight
+  │       ├── home
+  │       ├── notifications
+  │       ├── payment
+  │       ├── profile
+  │       ├── promo
+  │       ├── review
+  │       ├── search_filter
+  │       ├── settings
+  │       ├── stepper
+  │       ├── tab_menu
+  │       ├── title
+  │       └── user
+  ├── linux
+  ├── macos
+  ├── pubspec.lock
+  ├── pubspec.yaml
+  ├── web
+  └── windows
+                          </pre>
+                      </div>
                     </div>
                 </section>
                 <!-- END -->
                 
-                <!-- INSTALL -->
-                <section class="row" id="firebase">
+              
+                <!-- ENVIRONMENT -->
+                <section class="row" id="environment">
                     <div class="col-lg-10">
-                        <h1>Firebase Setup</h1>
+                        <h1>Environment Setup</h1>
                         <hr />
-                        Follow this guide bellow to use the Firebase JavaScript SDK in your web app or as a client for end-user access.
-                        In this template, we made 4 steps to setup whole this app firebase services.
-                        <div class="part-categories">
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <a href="code_flow/firebase.html#get_api" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-book"></i>
-                                </span>
-                                1. Get API Key
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/firebase.html#auth" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-user"></i>
-                                </span>
-                                2. Setup Authentication
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/firebase.html#storage" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-tasks"></i>
-                                </span>
-                                3. Setup Realtime Database and Storage
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/firebase.html#dump_data" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-arrow-down"></i>
-                                </span>
-                                4. Import dump data (optional)
-                              </a>
-                            </div>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#env_windows" role="tab" aria-controls="pills-home" aria-selected="true">WINDOWS</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#env_mac" role="tab" aria-controls="pills-profile" aria-selected="false">MAC OS</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#env_linux" role="tab" aria-controls="pills-contact" aria-selected="false">LINUX</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="env_windows" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <h3>Windows</h3>
+                            <br />
+                            <h5>1. Install Android Studio</h5>
+                            <ol>
+                              <li>Download Android Studio
+                              <ul class="wp-block-list">
+                              <li>Visit the <a href="https://developer.android.com/studio/archive" target="_blank" rel="noopener">official Android Studio download page and download</a> (<strong>Android Studio Ladybug Feature Drop | 2024.2.2 RC 2 December 16, 2024</strong>)</li>
+
+
+
+                              <li>Ensure that you are using <strong>JDK 17</strong> for your Android projects for optimal compatibility and performance.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Run the Installer
+                              <ul class="wp-block-list">
+                              <li>Run the downloaded installer executable <strong>(e.g., android-studio-ide-&lt;version&gt;-windows.exe).</strong></li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Follow Installation Wizard
+                              <ul class="wp-block-list">
+                              <li>Follow the instructions in the installation wizard.</li>
+
+
+
+                              <li>Choose a custom installation location if needed.</li>
+
+
+
+                              <li>Select the components you want to install (Android Studio, Android Virtual Device, etc.).</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Start Android Studio
+                              <ul class="wp-block-list">
+                              <li>Once the installation is complete, launch Android Studio.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Install SDK Components
+                              <ul class="wp-block-list">
+                              <li>Android Studio will prompt you to install additional SDK components and tools. Allow it to download and install them.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Set up Emulator (Optional)
+                              <ul class="wp-block-list">
+                              <li>If you plan to use an emulator, you can create one through the AVD (Android Virtual Device) Manager in Android Studio.</li>
+                              </ul>
+                              </li>
+                            </ol>
+                            <br />
+                            
+                            <h5>2. Install VS Code</h5>
+                            <ol>
+                              <li><a href="https://code.visualstudio.com/docs/setup/windows">Visual Studio Code</a> 1.86 or later with the <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter extension for VS Code</a>.</li>
+                              <li>
+                                <p>Once it is downloaded, run the installer (VSCodeUserSetup-{version}.exe)</p>
+                                <p>By default, VS Code is installed under <code>C:\Users\{Username}\AppData\Local\Programs\Microsoft VS Code</code>.</p>
+                              </li>
+                            </ol>
+                            
+                            
+                            <br />
+                            <h5>3. Install Flutter SDK</h5>
+                            <ol>
+                              <li>Download Flutter SDK</li>
+
+
+
+                              <li>Visit the <a href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener">official Flutter download page for the&nbsp; latest version</a> for Windows.</li>
+
+
+
+                              <li>Extract Flutter Archive</li>
+
+
+
+                              <li>Extract the downloaded Flutter zip file to a location on your machine. For example, <strong>‘C:\dev’</strong>.</li>
+                              <li>Add Flutter to System Path:
+                                <ul class="wp-block-list">
+                                <li>Add the <strong>flutter\bin</strong> directory to your system’s PATH variable.
+                                <ul class="wp-block-list">
+                                <li>Right-click on “This PC” or “Computer” on your desktop or in File Explorer.</li>
+
+
+
+                                <li>Select “Properties” -&gt; “Advanced system settings” -&gt; “Environment Variables.”</li>
+
+
+
+                                <li>In the “System variables” section, find and select the “Path” variable, then click “Edit.”</li>
+
+
+
+                                <li>Click “New” and add the path to the <strong>bin</strong> directory inside the Flutter directory.</li>
+                                </ul>
+                                </li>
+                                </ul>
+                                </li>
+
+
+
+                                <li>Verify Flutter Installation
+                                <ul class="wp-block-list">
+                                <li>Open a new Command Prompt and run ‘<strong>flutter doctor’</strong> to check for any dependencies that need to be installed or configured.</li>
+                                </ul>
+                                </li>
+                                <li>
+                                  <p>Launch VS Code. To integrate Flutter with VS Code, please try to create new project</p>
+                                </li>
+                                <li>
+                                  <p>To open the <strong>Command Palette</strong>, press <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>.</p>
+                                </li>
+                                <li>
+                                  <p>In the <strong>Command Palette</strong>, type <code>flutter</code>.</p>
+                                </li>
+                                <li>
+                                  <p>Select <strong>Flutter: New Project</strong>.</p>
+                                </li>
+                                <li>
+                                  <p>VS Code prompts you to locate the Flutter SDK on your computer.</p>
+                                  <p type="a"></p>
+                                  <ol>
+                                    <li>
+                                      <p>If you have the Flutter SDK installed, click <strong>Locate SDK</strong>.</p>
+                                    </li>
+                                    <li>
+                                      <p>If you do not have the Flutter SDK installed, click <strong>Download SDK</strong>.</p>
+                                      <p>This option sends you the Flutter install page if you have not installed Git for Windows as directed in the <a target="_blank" href="https://docs.flutter.dev/get-started/install/windows/mobile#development-tools">development tools prerequisites</a>.</p>
+                                      <ol>
+                                        <li>
+                                          <p>VS Code places you in your user profile to start. Choose a different location.</p>
+                                          <p>Consider <code>%USERPROFILE%</code> or <code>C:\dev</code>.</p>
+                                          <aside class="alert alert-warning">
+                                            <div class="alert-header"> <strong>Warning</strong></div>
+                                            <div class="alert-content">
+                                              <p>Don't install Flutter to a directory or path that meets one or both of the following conditions:</p>
+                                              <ul>
+                                                <li>The path contains special characters or spaces.</li>
+                                                <li>The path requires elevated privileges.</li>
+                                              </ul>
+                                              <p>As an example, <code>C:\Program Files</code> fails both conditions.</p>
+                                            </div>
+                                          </aside>
+                                        </li>
+                                        <li>
+                                          <p>Click <strong>Clone Flutter</strong>.</p>
+                                          <p>While downloading Flutter, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>This download takes a few minutes. If you suspect that the download has hung, click <strong>Cancel</strong> then start the installation again.</p>
+                                        </li>
+                                        <li>
+                                          <p>Once it finishes downloading Flutter, the <strong>Output</strong> panel displays.</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Checking Dart SDK version...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Dart SDK from the Flutter engine ...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Expanding downloaded archive...</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>When successful, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Initializing the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>While initializing, the <strong>Output</strong> panel displays the following:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line">
+          <span style="color:#191C22;--shiki-dark:#DCDCDC">Building flutter tool...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Running pub upgrade...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Resolving dependencies...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Got dependencies.</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Material fonts...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Gradle Wrapper...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading package sky_engine...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk tools...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk_product tools...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64 tools...</span></span>
+          <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64/font-subset tools...</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>This process also runs <code>flutter doctor -v</code>. At this point in the procedure, <em>ignore this output.</em> Flutter Doctor might show errors that don't apply to this quick start.</p>
+                                          <p>When the Flutter install succeeds, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Do you want to add the Flutter SDK to PATH so it's accessible</span></span>
+                                      <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">in external terminals?</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <p>Click <strong>Add SDK to PATH</strong>.</p>
+                                          <p>When successful, a notification displays:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">The Flutter SDK was added to your PATH</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <p>VS Code may display a Google Analytics notice.</p>
+                                          <p>If you agree, click <strong>OK</strong>.</p>
+                                        </li>
+                                        <li>
+                                          <p>To enable <code>flutter</code> in all PowerShell windows:</p>
+                                          <p type="a"></p>
+                                          <ol>
+                                            <li>Close, then reopen all PowerShell windows.</li>
+                                            <li>Restart VS Code.</li>
+                                          </ol>
+                                        </li>
+                                      </ol>
+                                    </li>
+                                  </ol>
+                                </li>
+                                <li>
+                                  <p>When prompted <strong>Which Flutter template?</strong>, ignore it. Press <kbd>Esc</kbd>.</p>
+                                </li>
+                                <li>
+                                  Agree to Android licenses. Before you can use Flutter and after you install all prerequisites, agree to the licenses of the Android SDK platform.
+                                  <ol>
+                                    <li>
+                                      <p>Open an elevated console window.</p>
+                                    </li>
+                                    <li>
+                                      <p>Run the following command to enable signing licenses.</p>
+                                      <div class="code-block-wrapper language-console">
+                                        <div class="code-block-body">
+                                          <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">C:&gt; flutter doctor --android-licenses</span></span></code></pre>
+                                        </div>
+                                      </div>
+                                      <p>If you accepted the Android Studio licenses at another time, this command returns:</p>
+                                      <div class="code-block-wrapper language-console">
+                                        <div class="code-block-body">
+                                          <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">[========================================] 100% Computing updates...</span></span>
+                                  <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">All SDK package licenses accepted.</span></span></code></pre>
+                                        </div>
+                                      </div>
+                                      <p>You can skip the next step.</p>
+                                    </li>
+                                    <li>
+                                      <p>Before agreeing to the terms of each license, read each with care.</p>
+                                    </li>
+                                  </ol>
+                                </li>
+                            </ol>
+                          </div>
+                          <div class="tab-pane fade" id="env_mac" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <h3>Mac OS</h3>
+                            <br />
+                            <h5>1. Install Android Studio</h5>
+                            
+                            <ol class="wp-block-list">
+                              <li>Download Android Studio
+                              <ul class="wp-block-list">
+                              <li>Visit the <a href="https://developer.android.com/studio/archive" target="_blank" rel="noopener">official Android Studio download page and download</a> (<strong>Android Studio Ladybug Feature Drop | 2024.2.2 RC 2 December 16, 2024</strong>)</li>
+
+
+
+                              <li>Ensure that you are using <strong>JDK 17</strong> for your Android projects for optimal compatibility and performance.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Open the DMG file
+                              <ul class="wp-block-list">
+                              <li>Open the downloaded DMG file.</li>
+
+
+
+                              <li>Drag and drop Android Studio into the “Applications” folder.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Run Android Studio
+                              <ul class="wp-block-list">
+                              <li>Open the “Applications” folder and launch Android Studio.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Set up Android Studio
+                              <ul class="wp-block-list">
+                              <li>Complete the Android Studio Setup Wizard.</li>
+
+
+
+                              <li>Android Studio may prompt you to install additional components and SDKs. Follow the instructions to install them.</li>
+                              </ul>
+                              </li>
+                            </ol>
+                            
+                              <br />
+                              <h5>2. Install Xcode </h5>
+                              <ol>
+                                <li>
+                                  <p>Open the <strong>App Store</strong> and sign in.</p>
+                                </li>
+                                <li>
+                                  <p>Search for <code>Xcode</code>.</p>
+                                </li>
+                                <li>
+                                  <p>Click <strong>Install</strong>.</p>
+                                  <p>The Xcode installer takes up 6+ GB of storage. The download might take some time.</p>
+                                </li>
+                                <li>
+                                  <p>To configure the command-line tools to use the installed version of Xcode, use the following commands.</p>
+                                  <div class="code-block-wrapper language-console">
+                                    <div class="code-block-body">
+                                      <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC" class="terminal-command undefined">sudo sh -c </span><span style="color:#0C7064;--shiki-dark:#1CDAC5">'xcode-select -s /Applications/Xcode.app/Contents/Developer &amp;&amp; xcodebuild -runFirstLaunch'</span></span></code></pre>
+                                    </div>
+                                  </div>
+                                  <p>Use this path for the latest version of Xcode. If you need to use a different version, specify that path instead.</p>
+                                </li>
+                                <li>
+                                  <p>Sign the Xcode license agreement.</p>
+                                  <div class="code-block-wrapper language-console">
+                                    <div class="code-block-body">
+                                      <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC" class="terminal-command undefined">sudo xcodebuild -license</span></span></code></pre>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ol>
+                            
+                              <h5>3. Install VS Code</h5>
+                              <ol>
+                                <li>Download <a target="_blank" href="https://code.visualstudio.com/docs/setup/mac">Visual Studio Code</a> 1.86 or later with the <a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter extension for VS Code</a>.</li>
+                                <li>
+                                <p>Open the browser's download list and locate the downloaded app or archive.</p>
+                                </li>
+                                <li>
+                                <p>If archive, extract the archive contents. Use double-click for some browsers or select the 'magnifying glass' icon with Safari.</p>
+                                </li>
+                                <li>
+                                <p>Drag <code>Visual Studio Code.app</code> to the <strong>Applications</strong> folder, making it available in the macOS Launchpad.</p>
+                                </li>
+                                <li>
+                                <p>Open VS Code from the <strong>Applications</strong> folder, by double clicking the icon.</p>
+                                </li>
+                                <li>
+                                <p>Add VS Code to your Dock by right-clicking on the icon, located in the Dock, to bring up the context menu and choosing <strong>Options</strong>, <strong>Keep in Dock</strong>.</p>
+                                </li>
+                              </ol>
+                            
+                              <br />
+                              <h5>4. Install Flutter SDK </h5>
+                              <ol class="wp-block-list">
+                                <li>Download Flutter SDK
+                                  <ul class="wp-block-list">
+                                  <li>Visit the <a href="https://docs.flutter.dev/get-started/install/macos" target="_blank" rel="noopener">official Flutter download page and download</a> the latest stable version for macOS.</li>
+                                  </ul>
+                                  </li>
+
+
+
+                                  <li>Extract Flutter Archive
+                                  <ul class="wp-block-list">
+                                  <li>Open a terminal and navigate to the directory where the archive was downloaded.</li>
+
+
+
+                                  <li>Extract the archive using the following command <strong>tar xf flutter_macos_&lt;version&gt;.tar.xz</strong> (replace<strong> flutter_macos_&lt;version&gt;.tar.xz</strong> with the actual filename)</li>
+                                  </ul>
+                                  </li>
+
+
+
+                                  <li>Move to Installation Location
+                                  <ul class="wp-block-list">
+                                  <li>Move the extracted folder to a location of your choice. For example : <strong>sudo mv flutter /YOUR_DIRECTORY</strong></li>
+                                  </ul>
+                                  </li>
+
+
+
+                                  <li>Add Flutter to System Path
+                                  <ul class="wp-block-list">
+                                  <li>Add the flutter/bin directory to your system’s PATH variable.</li>
+                                  </ul>
+                                  </li>
+
+
+
+                                  <li>Verify Flutter Installation
+                                  <ul class="wp-block-list">
+                                  <li>Open a new terminal and run: <strong>flutter docto</strong>r</li>
+                                  </ul>
+                                  </li>  
+                                
+                                  <li>
+                                    <p>Launch VS Code. To integrate Flutter with VS Code, please try to create new project</p>
+                                  </li>
+                                  <li>
+                                    <p>To open the <strong>Command Palette</strong>, press <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>.</p>
+                                  </li>
+                                  <li>
+                                    <p>In the <strong>Command Palette</strong>, type <code>flutter</code>.</p>
+                                  </li>
+                                  <li>
+                                    <p>Select <strong>Flutter: New Project</strong>.</p>
+                                  </li>
+                                
+                                  <li>
+                                    <p>When the <strong>Select Folder for Flutter SDK</strong> dialog displays, choose where you want to install Flutter.</p>
+                                    <p>VS Code places you in your user profile to start. Choose a different location.</p>
+                                    <p>Consider <code>~/development/</code></p>
+                                  </li>
+                                  <li>
+                                    <p>Click <strong>Clone Flutter</strong>.</p>
+                                    <p>While downloading Flutter, VS Code displays this pop-up notification:</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                    <p>This download takes a few minutes. If you suspect that the download has hung, click <strong>Cancel</strong> then start the installation again.</p>
+                                  </li>
+                                  <li>
+                                    <p>Once it finishes downloading Flutter, the <strong>Output</strong> panel displays.</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Checking Dart SDK version...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Dart SDK from the Flutter engine ...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Expanding downloaded archive...</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                    <p>When successful, VS Code displays this pop-up notification:</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Initializing the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                    <p>While initializing, the <strong>Output</strong> panel displays the following:</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+<pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Building flutter tool...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Running pub upgrade...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Resolving dependencies...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Got dependencies.</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Material fonts...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Gradle Wrapper...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading package sky_engine...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk_product tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64 tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64/font-subset tools...</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                    <p>This process also runs <code>flutter doctor -v</code>. At this point in the procedure, <em>ignore this output.</em> Flutter Doctor might show errors that don't apply to this quick start.</p>
+                                    <p>When the Flutter install succeeds, VS Code displays this pop-up notification:</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Do you want to add the Flutter SDK to PATH so it's accessible</span></span>
+                                <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">in external terminals?</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p>VS Code may display a Google Analytics notice.</p>
+                                    <p>If you agree, click <strong>OK</strong>.</p>
+                                  </li>
+                                  <li>
+                                    <p>To enable <code>flutter</code> in all Terminal windows:</p>
+                                    <p type="a"></p>
+                                    <ol>
+                                      <li>Close, then reopen all Terminal windows.</li>
+                                      <li>Restart VS Code.</li>
+                                    </ol>
+                                  </li>
+                                  <li>Install CocoaPods. If your apps depend on <a href="/packages-and-plugins/developing-packages#types">Flutter plugins</a> with native iOS code, install <a href="https://cocoapods.org/">CocoaPods</a>. This program bundles various dependencies across Flutter and iOS code.</li>
+                                  <li>
+                                    <p>Install <code>cocoapods</code> following the <a href="https://cocoapods.org/">CocoaPods install guide</a>.</p>
+                                    <div class="code-block-wrapper language-console">
+                                      <div class="code-block-body">
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC" class="terminal-command undefined">sudo gem install cocoapods</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p>Launch your preferred text editor.</p>
+                                  </li>
+                                  <li>
+                                    <p>Open the Zsh environmental variable file <code>~/.zshenv</code> in your text editor.</p>
+                                  </li>
+                                  <li>
+                                    <p>Copy the following line and paste it at the end of your <code>~/.zshenv</code> file.</p>
+                                    <div class="code-block-wrapper language-bash">
+                                      <div class="code-block-body"><span class="code-block-language" title="Language bash">bash</span>
+                                        <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#BD2314;--shiki-dark:#FF897E">export</span><span style="color:#191C22;--shiki-dark:#E1E2EC"> PATH=$HOME</span><span style="color:#191C22;--shiki-dark:#DCDCDC">/.</span><span style="color:#191C22;--shiki-dark:#E1E2EC">gem</span><span style="color:#191C22;--shiki-dark:#DCDCDC">/</span><span style="color:#191C22;--shiki-dark:#E1E2EC">bin</span><span style="color:#191C22;--shiki-dark:#DCDCDC">:</span><span style="color:#191C22;--shiki-dark:#E1E2EC">$PATH</span></span></code></pre>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <p>Save your <code>~/.zshenv</code> file.</p>
+                                  </li>
+                                  <li>
+                                    <p>To apply this change, restart all open terminal sessions.</p>
+                                  </li>
+                              </ol>
+                          </div>
+                          
+                          <div class="tab-pane fade" id="env_linux" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <h3>Linux</h3>
+                            <br />
+                            <h5>1. Install Android Studio</h5>
+                            <ul class="wp-block-list">
+                              <li>Download Android Studio
+                              <ul class="wp-block-list">
+                              <li>Visit the <a href="https://developer.android.com/studio/archive" target="_blank" rel="noopener">official Android Studio download page and download</a> (<strong>Android Studio Ladybug Feature Drop | 2024.2.2 RC 2 December 16, 2024</strong>)</li>
+
+
+
+                              <li>Ensure that you are using <strong>JDK 17</strong> for your Android projects for optimal compatibility and performance.</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Extract the Archive
+                              <ul class="wp-block-list">
+                              <li>Open a terminal and navigate to the directory where the archive was downloaded.</li>
+
+
+
+                              <li>Extract the archive using the following command <kbd>tar -xvzf android-studio-ide-&lt;version&gt;-linux.tar.gz</kbd><strong> </strong>(replace <strong>android-studio-ide-&lt;version&gt;-linux.tar.gz</strong> with the actual filename)</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Move to Installation Location
+                              <ul class="wp-block-list">
+                              <li>Move the extracted folder to a location of your choice. For example: <kbd>sudo mv android-studio /YOUR_DIRECTORY</kbd></li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Run Android Studio Setup
+                              <ul class="wp-block-list">
+                              <li>Navigate to the bin directory inside the Android Studio folder: <kbd>cd /YOUR_DIRECTORY/android-studio/bin</kbd></li>
+
+
+
+                              <li>Run ‘<strong>./studio.sh’</strong> to start the Android Studio setup</li>
+                              </ul>
+                              </li>
+
+
+
+                              <li>Follow Installation Wizard
+                              <ul class="wp-block-list">
+                              <li>Follow the instructions in the setup wizard to complete the installation.</li>
+
+
+
+                              <li>Choose a custom installation location if needed.</li>
+                              </ul>
+                              </li>
+                            </ul>
+                            <br />
+                            
+                            <h5>2. Install VS Code</h5>
+                            <ol>
+                              <li>
+                              <p>The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the <a href="https://go.microsoft.com/fwlink/?LinkID=760868" class="external-link" target="_blank">.deb package (64-bit)</a>, either through the graphical software center if it's available, or through the command line with:</p>
+                              <pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> install</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> ./</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">&lt;</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">fil</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000">e&gt;</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">.deb</span></span>
+                              <span class="line"></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># If you're on an older Linux distribution, you will need to run this instead:</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># sudo dpkg -i &lt;file&gt;.deb</span></span>
+<span class="line"><span style="--shiki-dark:#6A9955;--shiki-light:#008000"># sudo apt-get install -f # Install dependencies</span></span>
+<span class="line"></span></code></pre>
+                              <div class="markdown-alert note" dir="auto">
+                                    <span>
+                                      <svg class="markdown-alert-icon" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+                                        </path>
+                                      </svg>
+                                      Note
+                                    </span><p>Other binaries are also available on the <a href="/Download">VS Code download page</a>.</p>
+                              </div><p>When you install the .deb package, it prompts to install the apt repository and signing key to enable auto-updating using the system's package manager.</p>
+                              </li>
+                              <li>
+                              <p>To automatically install the apt repository and signing key, such as on a non-interactive terminal, run the following command first:</p>
+                              <pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">echo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "code code/add-microsoft-repo boolean true"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> | </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> debconf-set-selections</span></span>
+                              <span class="line"></span></code></pre>
+                              </li>
+                              <li>
+                              <p>To manually install the apt repository:</p>
+                              <ol>
+                              <li>
+                              <p>Run the following script:</p>
+                              <pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt-get</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> install</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> wget</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> gpg</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">wget</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -qO-</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> https://packages.microsoft.com/keys/microsoft.asc</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> | </span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">gpg</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> --dearmor</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">packages.microsoft.gpg</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> install</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -D</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -o</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> root</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -g</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> root</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -m</span><span style="--shiki-dark:#B5CEA8;--shiki-light:#098658"> 644</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> packages.microsoft.gpg</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> /etc/apt/keyrings/packages.microsoft.gpg</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">echo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main"</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> |</span><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> tee</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> /etc/apt/sources.list.d/vscode.list</span><span style="--shiki-dark:#D4D4D4;--shiki-light:#000000"> &gt; </span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515">/dev/null</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">rm</span><span style="--shiki-dark:#569CD6;--shiki-light:#0000FF"> -f</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> packages.microsoft.gpg</span></span>
+                              <span class="line"></span></code></pre>
+                              </li>
+                              <li>
+                              <p>Then update the package cache and install the package using:</p>
+                              <pre class="shiki shiki-themes dark-plus light-plus" style="--shiki-dark:#D4D4D4;--shiki-light:#000000;--shiki-dark-bg:#1E1E1E;--shiki-light-bg:#FFFFFF" tabindex="0"><code><span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> install</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt-transport-https</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> update</span></span>
+<span class="line"><span style="--shiki-dark:#DCDCAA;--shiki-light:#795E26">sudo</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> apt</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> install</span><span style="--shiki-dark:#CE9178;--shiki-light:#A31515"> code</span><span style="--shiki-dark:#6A9955;--shiki-light:#008000"> # or code-insiders</span></span>
+<span class="line"></span></code></pre>
+                              </li>
+                              </ol>
+                              </li>
+                              </ol>
+                            
+                            <br />
+                            <h5>3. Install Flutter SDK</h5>
+                            <ul class="wp-block-list">
+                              <li>Download Flutter SDK
+                                <ul class="wp-block-list">
+                                <li>Visit the <a href="https://docs.flutter.dev/get-started/install/linux" target="_blank" rel="noopener">official Flutter download page and download</a> the latest stable version for Linux.</li>
+                                </ul>
+                                </li>
+
+
+
+                                <li>Extract Flutter Archive
+                                <ul class="wp-block-list">
+                                <li>Open a terminal and navigate to the directory where the archive was downloaded.</li>
+
+
+
+                                <li>Extract the archive using the following command <kbd>tar xf flutter_linux_&lt;version&gt;.tar.xz</kbd> (replace<strong> flutter_linux_&lt;version&gt;.tar.xz</strong> with the actual filename)</li>
+                                </ul>
+                                </li>
+
+
+
+                                <li>Move to Installation Location
+                                <ul class="wp-block-list">
+                                <li>Move the extracted folder to a location of your choice. For example: <kbd>sudo mv flutter /YOUR_DIRECTORY</kbd></li>
+                                </ul>
+                                </li>
+
+
+
+                                <li>Add Flutter to System Path
+                                <ul class="wp-block-list">
+                                <li>Add the <strong>flutter/bin</strong> directory to your system’s PATH variable.</li>
+                                </ul>
+                                </li>
+
+
+
+                                <li>Verify Flutter Installation
+                                <ul class="wp-block-list">
+                                <li>Open a new terminal and run:<strong> </strong><kbd>flutter doctor</kbd></li>
+                                </ul>
+                                </li>  
+                              
+                                <li>
+                                  <p>Launch VS Code. To integrate Flutter with VS Code, please try to create new project</p>
+                                </li>
+                                <li>
+                                  <p>To open the <strong>Command Palette</strong>, press <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>.</p>
+                                </li>
+                                <li>
+                                  <p>In the <strong>Command Palette</strong>, type <code>flutter</code>.</p>
+                                </li>
+                                <li>
+                                  <p>Select <strong>Flutter: New Project</strong>.</p>
+                                </li>
+                                <li>
+                                  <p>VS Code prompts you to locate the Flutter SDK on your computer.</p>
+                                  <p type="a"></p>
+                                  <ol>
+                                    <li>
+                                      <p>If you have the Flutter SDK installed, click <strong>Locate SDK</strong>.</p>
+                                    </li>
+                                    <li>
+                                      <p>If you do not have the Flutter SDK installed, click <strong>Download SDK</strong>.</p>
+                                      <p>This option sends you the Flutter install page if you have not installed Git as directed in the <a href="#development-tools">development tools prerequisites</a>.</p>
+                                      <ol>
+                                        <li>
+                                          <p>When the <strong>Select Folder for Flutter SDK</strong> dialog displays, choose where you want to install Flutter.</p>
+                                          <p>VS Code places you in your user profile to start. Choose a different location.</p>
+                                          <p>Consider <code>~/development/</code></p>
+                                        </li>
+                                        <li>
+                                          <p>Click <strong>Clone Flutter</strong>.</p>
+                                          <p>While downloading Flutter, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>This download takes a few minutes. If you suspect that the download has hung, click <strong>Cancel</strong> then start the installation again.</p>
+                                        </li>
+                                        <li>
+                                          <p>Once it finishes downloading Flutter, the <strong>Output</strong> panel displays.</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Checking Dart SDK version...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Dart SDK from the Flutter engine ...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Expanding downloaded archive...</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>When successful, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Initializing the Flutter SDK. This may take a few minutes.</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>While initializing, the <strong>Output</strong> panel displays the following:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Building flutter tool...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Running pub upgrade...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Resolving dependencies...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Got dependencies.</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Material fonts...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading Gradle Wrapper...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading package sky_engine...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading flutter_patched_sdk_product tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64 tools...</span></span>
+<span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Downloading windows-x64/font-subset tools...</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                          <p>This process also runs <code>flutter doctor -v</code>. At this point in the procedure, <em>ignore this output.</em> Flutter Doctor might show errors that don't apply to this quick start.</p>
+                                          <p>When the Flutter install succeeds, VS Code displays this pop-up notification:</p>
+                                          <div class="code-block-wrapper language-console">
+                                            <div class="code-block-body">
+                                              <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">Do you want to add the Flutter SDK to PATH so it's accessible</span></span>
+                                      <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">in external terminals?</span></span></code></pre>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li>
+                                          <p>VS Code may display a Google Analytics notice.</p>
+                                          <p>If you agree, click <strong>OK</strong>.</p>
+                                        </li>
+                                        <li>
+                                          <p>To enable <code>flutter</code> in all Terminal windows:</p>
+                                          <p type="a"></p>
+                                          <ol>
+                                            <li>Close, then reopen all Terminal windows.</li>
+                                            <li>Restart VS Code.</li>
+                                          </ol>
+                                        </li>
+                                      </ol>
+                                    </li>
+                                  </ol>
+                                </li>
+                                <li><p>When prompted <strong>Which Flutter template?</strong>, ignore it. Press <kbd>Esc</kbd>. You can create a test project after checking your development setup.</p></li>
+                                <li>
+                                  Agree to Android licenses. Before you can use Flutter and after you install all prerequisites, agree to the licenses of the Android SDK platform.
+                                  <ol>
+                                    <li>
+                                      <p>Open an elevated console window.</p>
+                                    </li>
+                                    <li>
+                                      <p>Run the following command to enable signing licenses.</p>
+                                      <div class="code-block-wrapper language-console">
+                                        <div class="code-block-body">
+                                          <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC" class="terminal-command undefined">flutter doctor --android-licenses</span></span></code></pre>
+                                        </div>
+                                      </div>
+                                      <p>If you accepted the Android Studio licenses at another time, this command returns:</p>
+                                      <div class="code-block-wrapper language-console">
+                                        <div class="code-block-body">
+                                          <pre class="dash-dark dash-light shiki shiki-themes" tabindex="0"><code><span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">[========================================] 100% Computing updates...</span></span>
+                                  <span class="line"><span style="color:#191C22;--shiki-dark:#DCDCDC">All SDK package licenses accepted.</span></span></code></pre>
+                                        </div>
+                                      </div>
+                                      <p>You can skip the next step.</p>
+                                    </li>
+                                    <li>
+                                      <p>Before agreeing to the terms of each license, read each with care.</p>
+                                    </li>
+                                  </ol>
+                                </li>
+                            </ul>
                           </div>
                         </div>
                     </div>
                 </section>
+                
                 <!-- END -->
               
                 <!-- INSTALL -->
@@ -377,39 +1156,37 @@
                     <div class="col-lg-10">
                         <h1>Installation and Running App</h1>
                         <hr />
-                        BookMyTix is built on top of <a href="https://material-ui.com/" target="_blank">Material UI</a>
+                        <h3>Install Dependencies</h3>
+                        <br />
+                        BookMyTix is built on <a href="https://flutter.dev/" target="_blank">Flutter</a>
 						<ul>
-							<li>Connect to the internet</li>
-							<li>Install NodeJs from <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">NodeJs Official Page</a></li>
-							<li>Unzip the BookMyTix file to a folder in your computer</li>
-							<li>Open Terminal</li>
-							<li>Go to your file project (where you've unzipped the product)</li>
-							<li>
-                                <strong>Install Modules</strong><br />
-								Install module dependencies by run this script in terminal
-								<pre><code class="language-js">npm install</code></pre>
-                                It will download some necessary dependencies, it could take some minutes, just wait until finish.
-							</li>
-                            <li>
-                                <strong>Build Webpack DLL dependencies(If necessary)</strong><br>
-								Install module dependencies by run this script in terminal. This process ussualy done by 'npm install', but if system require it just run this command:
-								<pre class=" language-js"><code class=" language-js">npm run build<span class="token punctuation">:</span>dll</code></pre>
-							</li>
-							<li>
-                                <strong>Run App</strong><br />
-								After build static library, then run the app.
-								<pre><code class="language-js">npm start</code></pre>
-                                The process should be take about 1-2 minutes.
-                                <br />
-                                <img src="images/cmd1.png" width="600" alt="process" />
-                                <br />
-								<em>INFO: <br />
-									- Just run this script whenever you want start the project.<br />
-									- Run <code>npm install</code> again if you have new module dependencies,<br />
-								</em>
-							</li>
-							<li>Navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
+                          <li>Connect to the internet</li>
+                          <li>
+                            Then open your project. Once the project is open, VS Code may prompt you to install the dependencies. 
+                            Click Install Dependencies
+                          </li>
+                          <li>If not, you can run the flutter 
+                            <kbd>pub get</kbd> from the terminal in the project directory to fetch the dependencies.</li>
+                          <li>And for the another way, you can open <code>pubspec.yaml</code></li>
+                          <li>
+                            Click icon
+                            <span class="icon">
+                              <i class="glyphicon glyphicon-download-alt"></i>
+                            </span>
+                          </li>
+                          <li>Wait until dependencies installation finish</li>
 						</ul>
+                        <br />
+                      
+                        <h3>Run and Debug App</h3>
+                        <ul>
+                          <li>Using VS Code's built-in debugging features, such as setting breakpoints.</li>
+                          <li>Open <code>lib/main.dart</code></li>
+                          <li>Click menu <strong>Run</strong> &gt; <strong>Start Debuging (F5)</strong> </li>
+                          <li>Selecting a target device. When a Flutter project is open in VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or the message No Devices)</li>
+                        </ul>
+                        <img src="images/run.png" alt="run" />
+                        <br />
                     </div>
                 </section>
                 <!-- END -->
@@ -417,150 +1194,115 @@
 				<!-- DEPLOYMENT APP -->
                 <section class="row" id="deploy">
                     <div class="col-lg-10">
-                        <h1>Deployment</h1>
+                        <h1>Build &amp; Deployment</h1>
                         <hr />
-                        <h4>Production</h4>
-						<ul>
-              <li>First you have to clone/copy the all project code in your hosting/cloud server.</li>
-              <li>Open your console to access the hosting/cloud server.</li>
-              <li>If you haven't install the dependencies before, please run npm install</li>
-							<li>
-                                After that you need to build the production assets first
-								<pre><code class="language-js">npm run build</code></pre>
-								It usually take longer time than development to generate and compress production code.
-								The generated files will be placed in <code>build/</code>
-                                <img src="images/cmd2.png" width="800" alt="process" />
-                                <img src="images/cmd3.png" width="800" alt="process" />
-							</li>
-                            <li>
-                                Then start the app
-								<pre><code class="language-js">npm run start:prod</code></pre>
-							</li>
-                            <li><strong>-------- OR -------</strong></li>
-                            <li>
-                              If you want run it in background you may try PM2 <a href="https://www.npmjs.com/package/pm2" target="_blank">https://www.npmjs.com/package/pm2</a>.
-                              Then run this command:
-                              <pre><code class="language-js">node node_modules/.bin/cross-env NODE_ENV=production pm2 start server</code></pre>
-                            </li>
-							<li>Then navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
-                            <li><strong>Note:</strong> 
-                              After build finish then when you access it on local, all of the assets will be stored in local storage.
-                              So when You make a change the result will not update, because browser will take the code from cache.
-                              <br />
-                              This is a default feature from React Boilerplate which has focus of 'offline first'.
-                              So will make easier to build Progressive Web Aplication. But you can clear it by clear in local storage by following this step.
-                              <br /><br />
-                              <strong>Google Chrome and Opera</strong>
-                              <ol>
-                                <li>Open "Developer Tools" or Right click > Inspect element</li>
-                                <li>Then go to tab "Application"</li>
-                                <li>Choose "Clear Storage" in left sidebar</li>
-                                <li>Scroll down then You will see button "Clear site data"</li>
-                                <li>Just click it to clear all stored assets
-                                  <br />
-                                  <img src="images/chrome_clear_localstorage.png" width="600" alt="img" />
-                                </li>
-                              </ol>
-                              <br /><br />
-                              <strong>Safari and Firefox</strong>
-                              <ol>
-                                <li>Open "Developer Tools" or Right click > Inspect element</li>
-                                <li>Then go to tab "Storage"</li>
-                                <li>Choose "Local Storage" in left sidebar</li>
-                                <li>Just right click > Delete All
-                                  <br />
-                                  <img src="images/firefox_clear_localstorage.png" width="600" alt="img" />
-                                </li>
-                              </ol>
-                            </li>
-						</ul>
-                    </div>
-                </section>
-                <!-- END -->
-              
-              <!-- OFFLINE ACCESS -->
-                <section class="row" id="offline">
-                    <div class="col-lg-10">
-                        <h1>Offline Access</h1>
-                        <hr>
-                        <h4>Enable offline access</h4>
-                        <p>This is a feature from React Boilerplate which has focus of 'offline first'.
-                              So will make easier to build Progressive Web Aplication. The next frontier in performant web apps: availability without a network connection from the instant your users load the app.</p>
-						            <ul>
-                            <li>
-                              Open <code>app/app.js</code>
-                              At very bottom just enable(uncomment) this code
-                              <pre class=" language-js"><code class=" language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'serviceWorker'</span> <span class="token keyword">in</span> navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'/service-worker.js'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>registration <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'SW registered: '</span><span class="token punctuation">,</span> registration<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>registrationError <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'SW registration failed: '</span><span class="token punctuation">,</span> registrationError<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-                            </li>
-                            <li>Next, open <code>/internals/webpack/webpack.prod.babel.js</code>
-                              Then enable(uncomment) the webpack plugin import
-                              <pre class=" language-js"><code class=" language-js"><span class="token keyword">const</span> WorkboxPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'workbox-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-                              and enable(uncomment) WorkboxPlugin webpack config around line:87
-                              <pre class=" language-js"><code class=" language-js"><span class="token keyword">new</span> <span class="token class-name">WorkboxPlugin<span class="token punctuation">.</span>GenerateSW</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  <span class="token comment">// these options encourage the ServiceWorkers to get in there fast</span>
-  <span class="token comment">// and not allow any straggling "old" SWs to hang around</span>
-  clientsClaim<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  navigateFallback<span class="token punctuation">:</span> <span class="token string">'/index.html'</span><span class="token punctuation">,</span>
-  skipWaiting<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  maximumFileSizeToCacheInBytes<span class="token punctuation">:</span> <span class="token number">5242880</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre>
-                            </li>
-                            <li>Go to console, then do the same as deployment method <a href="#run">above</a>. Build the site <pre class=" language-js"><code class=" language-js">npm run build</code></pre></li>
-                            <li>After finish run the site in production mode <pre class=" language-js"><code class=" language-js">npm run start<span class="token punctuation">:</span>prod</code></pre></li>
-                            <li>Then navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></li>
-                            <li>
-                              <div class="alert alert-warning">
-                                  WARNING: Do not cache build/.htaccess and build/service-worker.js in your server, required for offline-first updates.
-                              </div>
-                            </li>
-                            <li>
-                              <strong>Note 1:</strong>
-                              With this feature all scripts will be stored in Local Storage, so can be accessed even offline.
-                              And if any updates, The service-worker.js will handle it when browser reload or re-open the site.
-                              <strong>Once update received, the site won't changes immediately, because the status is pending/waiting,
-                              Please run the second reload to set the update as active.</strong>
-                              <br>
-                              <img src="images/sw.png" width="400" alt="sw">
-                            </li>
-                            <li><strong>Note 2:</strong> 
-                              After build finish then when you access it on local, all of the assets will be stored in local storage.
-                              So when You make a change the result will not update, because browser will take the code from cache.
-                              <br>
-                              But you can clear it by clear in local storage by following this step.
-                              <br><br>
-                              <strong>Google Chrome and Opera</strong>
-                              <ol>
-                                <li>Open "Developer Tools" or Right click &gt; Inspect element</li>
-                                <li>Then go to tab "Application"</li>
-                                <li>Choose "Clear Storage" in left sidebar</li>
-                                <li>Scroll down then You will see button "Clear site data"</li>
-                                <li>Just click it to clear all stored assets
-                                  <br>
-                                  <img src="images/chrome_clear_localstorage.png" width="600" alt="img">
-                                </li>
-                              </ol>
-                              <br><br>
-                              <strong>Safari and Firefox</strong>
-                              <ol>
-                                <li>Open "Developer Tools" or Right click &gt; Inspect element</li>
-                                <li>Then go to tab "Storage"</li>
-                                <li>Choose "Local Storage" in left sidebar</li>
-                                <li>Just right click &gt; Delete All
-                                  <br>
-                                  <img src="images/firefox_clear_localstorage.png" width="600" alt="img">
-                                </li>
-                              </ol>
-                            </li>
-						</ul>
+                        <h4>Build Android</h4>
+						<ol>
+                          <li>Open Terminal Console</li>
+                          <li>
+                            Run the following command to build the APK 
+                            <pre class="language-js"><code class="language-js">flutter build apk</code></pre>
+                          </li>
+                          <li>Wait until finish. And the APK built result will be placed in<code>build/app/outputs/flutter-apk/app-release.apk</code></li>
+                          <li>
+                            This command will compile your Flutter code and generate the APK file. You can find the APK in the build/app/outputs/flutter-apk directory inside your project folder. The APK file will be named something like app-release.apk or app-debug.apk.
+                          </li>
+                          <li>
+                            By using the above command, you will get a larger merged apk with this. But you can split them with this command
+                            <pre class="language-js"><code class="language-js">flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi</code></pre>
+                          </li>
+                          <li>
+                            With this command, Flutter will generate three APKs, use one of them which is compatible with your device.
+                          </li>
+                          <li>
+                            When you're ready to prepare a <em>release</em> version of your app, for example to <a target="_blank" href="https://developer.android.com/distribute">publish to the Google Play Store</a>, this page can help. Before publishing, you might want to put some finishing touches on your app. This guide explains how to perform the following tasks:
+                            <br />
+                            <ul>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#add-a-launcher-icon">Add a launcher icon</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#enable-material-components">Enable Material Components</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#sign-the-app">Sign the app</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#shrink-your-code-with-r8">Shrink your code with R8</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#enable-multidex-support">Enable multidex support</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#review-the-app-manifest">Review the app manifest</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#review-the-gradle-build-configuration">Review the build configuration</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#build-the-app-for-release">Build the app for release</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#publish-to-the-google-play-store">Publish to the Google Play Store</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#update-the-apps-version-number">Update the app's version number</a></li>
+                              <li><a target="_blank" href="https://docs.flutter.dev/deployment/android#android-release-faq">Android release FAQ</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            For more deploying documentations please follow this documentation: <a href="https://docs.flutter.dev/deployment/android" target="_blank" rel="noopener">https://docs.flutter.dev/deployment/android</a>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                          </li>
+						</ol>
+                        <img src="images/build.png" width="500" alt="build" />
+                      
+                      
+                        <br />
+                        <br />
+                        <h4>Build iOS</h4>
+                        <ol>
+                          <li>
+                            Open Explorer File in VS Code. Right click on the <strong>ios</strong> folder
+                            <br />
+                            <img src="images/ios.png" alt="ios" width="300" />
+                          </li>
+                          <li>
+                            It will open <strong>Xcode</strong>. On Left Sidebar click <strong>Runner</strong>.
+                            And then choose tab <strong>Signing &amp; Capabilities</strong> &gt; <strong>All</strong>
+                          </li>
+                          <li>
+                            Expand <strong>Signing</strong>, then Select <strong>Team</strong><br />
+                            <img src="images/xcode.png" alt="xcode" />
+                          </li>
+                          <li>Open terminal and locate to your project.</li>
+                          <li>
+                            Run the following command to build the <strong>Runner.app</strong>
+                            <pre class="language-js"><code class="language-js">flutter build ios</code></pre>
+                          </li>
+                          <li>
+                            Wait until finish. And the Runner.app built result will be placed in <code>build/ios/iphoneos/Runner.app</code>
+                            <img src="images/runner.png" width="500" alt="runner" />
+                          </li>
+                          <li>
+                            There is no general way to generate apps for iOS. Apple doesn’t allow you to install apps like this. If you want to install it on your iOS device, then you have to deploy it on <strong>TestFlight</strong> or <strong>AppStore</strong>. For deploying it, please follow this documentation: <a href="https://docs.flutter.dev/deployment/ios" target="_blank" rel="noopener">https://docs.flutter.dev/deployment/ios</a>&nbsp;
+                          </li>
+                        </ol>
+                        
+                        <br />
+                        <br />
+                        <h4>Build and Deploy Web</h4>
+                        <ol>
+                          <li>Open terminal and locate to your project.</li>
+                          <li>
+                            Run the following command to build the web app:
+                            <pre class="language-js"><code class="language-js">flutter build web</code></pre>
+                          </li>
+                          <li>
+                            Wait until finish. And the APK built result will be placed in <code>build/web</code>
+                            <img src="images/web.png" width="500" alt="web" />
+                          </li>
+                          <li>To deploy it, copy all files inside <strong>web/</strong> folder to your web server or cloud hosting</li>
+                          <li>
+                            When you are ready to deploy your app, upload the buld web release to Vercel or a similar service. Here are a few possibilities, but there are many others:
+                            <ul>
+                              <li><a href="https://vercel.com/">Vercel</a></li>
+                              <li><a href="https://www.netlify.com/">Netlify</a></li>
+                              <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            Example with <strong>Vercel</strong>. Open terminal and locate your project, go to <code>build/web, and run this command:</code>
+                            <pre class="language-js"><code class="language-js">vercel deploy --prod</code></pre>
+                          </li>
+                          <li>
+                            Follow the instruction and wait until deployment finish.
+                            <br />
+                            <img src="images/vercel.png" width="500" alt="vercel" />
+                          </li>
+                          <li>Open production link in browser</li>
+                        </ol>
+                        
                     </div>
                 </section>
                 <!-- END -->
@@ -570,13 +1312,13 @@
                     <div class="col-lg-10">
                         <h1>Troublehooting</h1>
                         <hr />
-                        <p>Here's most common error problem when installation and first setup project</p>
+                        <p>Here's most common error problem when build and debug the project</p>
                         <div class="accordion" id="accordionExample">
                           <div class="card">
                             <div class="card-header" id="headingDeprecated">
                               <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDeprecated" aria-expanded="true" aria-controls="collapseOne">
-                                  Installation Problem: Dependencies Error Deprecation
+                                  Flutter: build ndk version mismatch
                                 </button>
                               </h5>
                             </div>
@@ -585,22 +1327,14 @@
                               <div class="card-body">
                                 <ul>
                                   <li>
-                                      When installation and you got error like this :<br>
-                                      <pre class=" language-js"><code class=" language-js">
-Could not resolve dependency<span class="token punctuation">:</span>
-peer example<span class="token operator">-</span>peer<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token string">"^3.2.0"</span> <span class="token keyword">from</span> example<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token number">3.0</span><span class="token number">.0</span>
-example<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token number">3.0</span><span class="token number">.0</span> <span class="token keyword">from</span> the root project
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      Try to remove the error package (i.e example-package@3.0.0) from <code>package.json</code> Then install again. 
-                                      <pre class=" language-js"><code class=" language-js">npm install</code></pre>
-                                      After installation done, try to install the problematic package manually with <code>--legacy-peer-deps</code> options. 
-                                      <pre class=" language-js"><code class=" language-js">npm install example<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token number">3.0</span><span class="token number">.0</span> <span class="token operator">--</span>legacy<span class="token operator">-</span>peer<span class="token operator">-</span>deps</code></pre>
-                                      Example for multiple packages
-                                      <pre class=" language-js"><code class=" language-js">npm install example<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token number">3.0</span><span class="token number">.0</span> other<span class="token operator">-</span><span class="token keyword">package</span>@<span class="token number">1.0</span><span class="token number">.0</span> <span class="token operator">--</span>legacy<span class="token operator">-</span>peer<span class="token operator">-</span>deps</code></pre>
-                                    </li>
+                                      The NDK version 29.0.13113456 can be install manually by going into
+ <code>android studio</code> -&gt; <code>SDK manager</code> -&gt; <code>SDK tools</code>.
+Select the show package detail checkbox.
+                                  </li>
+                                  <li>You will be able to see all the NDK versions available.</li>
+                                  <li>More details: https://developer.android.com/studio/projects/install-ndk#specific-version</li>
                                 </ul>
+                                <img src="images/ndk.png" alt="studio" width="500" />
                               </div>
                             </div>
                           </div>
@@ -608,7 +1342,7 @@ example<span class="token operator">-</span><span class="token keyword">package<
                             <div class="card-header" id="headingOne">
                               <h5 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  Installation Problem: Dependencies Warning
+                                  Android Studio Error: “The project is using an incompatible version"
                                 </button>
                               </h5>
                             </div>
@@ -616,70 +1350,20 @@ example<span class="token operator">-</span><span class="token keyword">package<
                             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                               <div class="card-body">
                                 <ul>
+                                  <li>This issue sometimes appear when build Android App or Debuging in Android Device or Emulator.</li>
                                   <li>
-                                      <em>if got warning like this :</em><br />
-                                      <pre><code class="language-js">npm WARN redux-immutablejs@0.0.8 requires a peer of immutable@^3.7.5 but none is installed. You must install peer dependencies yourself.
-        npm WARN react-draft-wysiwyg@1.12.13 requires a peer of immutable@3.x.x || 4.x.x but none is installed. You must install peer dependencies yourself.
-        npm WARN slick-carousel@1.8.1 requires a peer of jquery@>=1.8.0 but none is installed. You must install peer dependencies yourself.
-        npm WARN draftjs-utils@0.9.4 requires a peer of immutable@3.x.x || 4.x.x but none is installed. You must install peer dependencies yourself.
-        npm WARN html-to-draftjs@1.4.0 requires a peer of immutable@3.x.x || 4.x.x but none is installed. You must install peer dependencies yourself.
-        </code></pre>
-                                      <strong>Don't worry the app will run as well</strong>
-                                      <p>For warning some of dependencies need another dependencies too, maybe once you install them, there’s some changes from the 3rd party vendor so probably it will make a warning to another dependencies.</p>
-                                    </li>
-                                    <li>
-                                      <em>if got an error with a dependencies installation</em>. Try to remove the all module
-                                      <code>node_modules/</code>. Then install again with <code>npm install</code>. 
-                                      If error still happen, please try to remove the problematic package <code>node_modules/</code> foler. 
-                                      After that try to install the problematic package manually. <code>npm install &lsaquo;package_name&rsaquo; --save-dev</code>
-                                    </li>
-                                    <li>
-                                      if still got an error. Try to update the problematic package instead.
-                                    </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingNode18">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNode18" aria-expanded="true" aria-controls="collapseOne">
-                                  Running Problem: Node Version &gt;= 18
-                                </button>
-                              </h5>
-                            </div>
-
-                            <div id="collapseNode18" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" style="">
-                              <div class="card-body">
-                                <ul>
+                                    Open Explorer File in VS Code. Right click on the android folder
+                                    <br />
+                                    <img src="images/android_studio.png" alt="studio" width="500" />
+                                  </li>  
                                   <li>
-                                      When you run npm run dev, build, etc, then you got error like this:
-                                      <pre class=" language-js"><code class=" language-js">
-Error<span class="token punctuation">:</span> error<span class="token punctuation">:</span><span class="token number">0308010</span>C<span class="token punctuation">:</span>digital envelope routines<span class="token punctuation">:</span><span class="token punctuation">:</span>unsupported
-    at <span class="token keyword">new</span> <span class="token class-name">Hash</span> <span class="token punctuation">(</span>node<span class="token punctuation">:</span>internal<span class="token operator">/</span>crypto<span class="token operator">/</span>hash<span class="token punctuation">:</span><span class="token number">67</span><span class="token punctuation">:</span><span class="token number">19</span><span class="token punctuation">)</span>
-    at Object<span class="token punctuation">.</span><span class="token function">createHash</span> <span class="token punctuation">(</span>node<span class="token punctuation">:</span>crypto<span class="token punctuation">:</span><span class="token number">130</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">)</span>
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      Open terminal and paste these as described:
-                                      <ol>
-                                        <li>
-                                          Linux and macOS (Windows Git Bash)
-                                          <pre class=" language-js"><code class=" language-js"><span class="token keyword">export</span> <span class="token constant">NODE_OPTIONS</span><span class="token operator">=</span><span class="token operator">--</span>openssl<span class="token operator">-</span>legacy<span class="token operator">-</span>provider</code></pre>
-                                        </li>
-                                        <li>
-                                          Windows command prompt
-                                          <pre class=" language-js"><code class=" language-js"><span class="token keyword">set</span> <span class="token constant">NODE_OPTIONS</span><span class="token operator">=</span><span class="token operator">--</span>openssl<span class="token operator">-</span>legacy<span class="token operator">-</span>provider</code></pre>
-                                        </li>
-                                        <li>
-                                          Windows PowerShell
-                                          <pre class=" language-js"><code class=" language-js">$env<span class="token punctuation">:</span><span class="token constant">NODE_OPTIONS</span> <span class="token operator">=</span> <span class="token string">"--openssl-legacy-provider"</span></code></pre>
-                                        </li>
-                                      </ol>
-                                    </li>
-                                    <li>
-                                      Then try <code>npm run dev</code> or <code>npm run build</code> again
-                                    </li>
+                                    In Android studio will show notification on the right bottom to upgrade AGP
+                                    <br />
+                                    <img src="images/agp.png" alt="studio" width="500" />
+                                  </li>  
+                                  <li>Click <strong>Start AGP Upgrade Assistant</strong></li>
+                                  <li>It will download and install Graddle library and take sometime. Wait until finish.</li>
+                                  <li>Run build or debug again</li>
                                 </ul>
                               </div>
                             </div>
@@ -687,25 +1371,33 @@ Error<span class="token punctuation">:</span> error<span class="token punctuatio
                           <div class="card">
                             <div class="card-header" id="headingTwo">
                               <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  Installation Problem: Stuck on Installation
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwp" aria-expanded="true" aria-controls="collapseOne">
+                                  Error running pod install
                                 </button>
                               </h5>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+
+                            <div id="collapseTwp" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                               <div class="card-body">
                                 <ul>
+                                  <li>Fixed by updating flutter and cocoa pods to the latest version.</li>
                                   <li>
-                                      Here's a case error when installation being stuck on node-pre-gyp<br />
-                                      <pre><code class="language-js">node-pre-gyp WARN Using request for node-pre-gyp https download 
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      Please stop the installation process by press <strong>CTRL+C</strong>
-                                    </li>
-                                    <li>
-                                      Then run <code>npm install</code> again.
-                                    </li>
+                                    <pre class=" language-js">
+                                      <code class=" language-js">
+flutter clean
+rm -Rf ios/Pods
+rm -Rf ios/.symlinks
+rm -Rf ios/Flutter/Flutter.framework
+rm -Rf ios/Flutter/Flutter.podspec
+flutter pub get
+cd ios
+pod install # (or on an M1+ mac: arch -x86_64 pod install)
+cd ..
+flutter build ios
+flutter run
+                                      </code>
+                                    </pre>
+                                  </li>  
                                 </ul>
                               </div>
                             </div>
@@ -713,67 +1405,22 @@ Error<span class="token punctuation">:</span> error<span class="token punctuatio
                           <div class="card">
                             <div class="card-header" id="headingThree">
                               <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Start Project Problem: Error SCSS
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                  XCode: Failed to create provisioning profile. There are no devices registered in your account
                                 </button>
                               </h5>
                             </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                               <div class="card-body">
                                 <ul>
+                                  <li>Accept the latest apple developer agreement by logging with Account Holder credentials in to <a href="https://developer.apple.com" rel="nofollow noreferrer">https://developer.apple.com</a></li>
                                   <li>
-                                      If you get error messages when start project <code>npm start</code> like this<br />
-                                      <pre><code class="language-js">ERROR in ./app/styles/layout/base.scss (./node_modules/css-loader/dist/cjs.js??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/lib/loader.js??ref--8-3!./app/styles/layout/base.scss)
-Module build failed (from ./node_modules/sass-loader/lib/loader.js):
-Error: ENOENT: no such file or directory, scandir '/Users/retina/Documents/Enlite/enlite-prime_v1/starter-project/node_modules/node-sass/vendor'
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      It mean the node-sass not installed succesfully. May because connection problem, changed node environment during installation, or blocked node-sass repository
-                                    </li>
-                                    <li>
-                                      Please install <strong>node-sass</strong> manually by <code>npm install node-sass --save</code>
-                                    </li>
-                                    <li>
-                                      Build dll libraries <code>npm run build:dll</code>
-                                    </li>
-                                    <li>
-                                      Try to start project again <code>npm start</code>
-                                    </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingFour">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                  Development Problem: Error Firebase Auth and Database
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                              <div class="card-body">
-                                <ul>
-                                  <li>
-                                      If you get error messages when login/register or in Pre-build Apps<br />
-                                      <pre><code class="language-js">{"error":{"code":400,"message":"API key not valid. Please pass a valid API key.","errors":[{"message":"API key not valid. Please pass a valid API key.","domain":"global","reason":"badRequest"}],"status":"INVALID_ARGUMENT"}}
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      <pre><code class="language-js">{"error":{"code":400,"message":"API key not valid. Please pass a valid API key.","errors":[{"message":"API key not valid. Please pass a valid API key.","domain":"global","reason":"badRequest"}],"status":"INVALID_ARGUMENT"}}
-                                      @firebase/database: FIREBASE WARNING: Firebase error. Please ensure that you spelled the name of your Firebase correctly
-        </code></pre>
-                                    </li>
-                                    <li>
-                                      Please check the firebase configuration in <code>app/firebase/config.js</code>. By default we use fake configuration script.
-                                    </li>
-                                    <li>
-                                      If you haven't make you're configuration please follow the <a href="code_flow/firebase.html#get_api">firebase setup instruction</a>
-                                    </li>
-                                    <li>
-                                      Then replace you're config script to <code>app/firebase/config.js</code>
-                                    </li>
+                                    Open ios/ folder in Xcode. On Left Sidebar click Runner. And then choose tab Signing &amp; Capabilities > All
+Expand Signing, then Select Team
+                                  </li>  
+                                  <li>it will auto generate all certificates. But note that they all are created virtually, so cannot see anywhere in your account or keychain, then also you are able to run or install application in your device.</li>
+                                  <li>Try run buid or debug the project again</li>
                                 </ul>
                               </div>
                             </div>

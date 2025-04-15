@@ -1336,3 +1336,9 @@ ul.styled li{
   padding: 3px 10px 3px 20px;
   background: none !important
 }
+
+.directory-tree {
+    background: #dedede;
+    overflow: auto;
+    max-height: 700px;
+}
