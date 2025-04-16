@@ -88,7 +88,7 @@
                 
                 <li><h3>Additional Info</h3></li>
                 <li>
-                    <a href="#reference">Install Dependencies</a>
+                    <a href="#plugin">Install Dependencies</a>
                 </li>
                 <li>
                     <a href="#reference">External Reference</a>
@@ -1967,133 +1967,55 @@ Container(
                 </div>
             </section>
             <!-- END -->
-				
+
+            <!-- INSTALL DEPENDENCIES -->
+            <section id="plugin">
+              <h1>Install Dependencies</h1>
+              <p>You can get flutter dependencies from <a target="_blank" href="https://pub.dev/">https://pub.dev/</a> </p> <br />
+              <ul>
+                <li>Find dependencies you want from <a target="_blank" href="https://pub.dev/">https://pub.dev/</a> or from <strong>VS Code</strong></li>
+                <li>
+                  In VS Code, click search on the top, and type "<strong>&gt;</strong>"
+                </li>
+                <li>
+                  Some option will show, choose <strong>Dart: Add Dependency</strong>
+                </li>
+                <li>
+                  Type package name, then press Enter. It will download the dependecy and listed in the <code>pubspec.yaml</code>
+                </li>
+              </ul>
               
-                <!-- REFERENCE -->
-                <section id="reference">
-                    <h1>External Reference</h1>
-                    <p>Here's some external reference of library that we used</p> <br />
-                    <ul>
-                      <li>
-                        <strong>React Boilerplate</strong>
-                        <a href="https://www.reactboilerplate.com/">https://www.reactboilerplate.com/</a>
-                      </li>
-                      <li>
-                        <strong>Material UI</strong>
-                        <a href="https://material-ui.com/">https://material-ui.com/</a>
-                      </li>
-                      <li>
-                        <strong>Firebase</strong>
-                        <a href="https://firebase.google.com/docs">https://firebase.google.com/docs</a>
-                      </li>
-                      <li>
-                        <strong>JSS (CSS in JS)</strong>
-                        <a href="https://cssinjs.org/">https://cssinjs.org/</a>
-                      </li>
-                      <li>
-                        <strong>Immutable JS</strong>
-                        <a href="https://facebook.github.io/immutable-js/">https://facebook.github.io/immutable-js/</a>
-                      </li>
-                      <li>And many more. Check the all dependencies and the repository <a href="#credit">here</a></li>
-                    </ul>
-                </section>
-                <!-- END -->
+              <img src="images/pub.png" width="400" alt="pub" />
+              
+              <p>
+                The another way, you can copy and paste the dependency name with spesific version to <code>pubspec.yaml</code>,
+                then save and it will automatically download the dependency. If not you can run <code>flutter pub dev</code>
+              </p>
+            </section>
+            <!-- END -->
+            
+              
+            <!-- REFERENCE -->
+            <section id="reference">
+                <h1>External Reference</h1>
+                <p>Here's some external reference of library that we used</p> <br />
+                <ul>
+                  <li>
+                    <strong>Flutter</strong>
+                    <a target="_blank" href="https://docs.flutter.dev/">https://docs.flutter.dev/</a>
+                  </li>
+                  <li>
+                    <strong>Flutter Icon</strong>
+                    <a target="_blank" href="https://fluttericon.cn/">https://fluttericon.cn/</a>
+                  </li>
+                  <li>
+                    <strong>GetX</strong>
+                    <a target="_blank" href="https://pub.dev/packages/get">https://pub.dev/packages/get</a>
+                  </li>
+                </ul>
+            </section>
+            <!-- END -->
                 
-                <!-- ICONS -->
-                 <!-- FONTS -->
-                <section id="font">
-                    <h1>Fonts Used</h1>
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img src="images/font.png" style="margin-top: 100px" width="100%" alt="roboto font" />
-                        </div>
-                        <div class="col-lg-8">
-                            <hr /><br /><br />
-                            <img src="images/fonts.jpg" width="400" alt="roboto font" />
-                            <br /><br />
-                            <p>
-                              <strong>Usage: </strong> &nbsp; Checkout example usage in 
-                              <a href="http://localhost:3000/app/ui/typography" >Ui Elements &rsaquo; Typography</a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <!-- END -->
-                <section class="row" id="icon">
-                    <div class="col-lg-12">
-                        <h1>Icons Used</h1>
-                        <hr />
-                        To use icon, it has two method<br /><br />
-                        <h4>Material Font Icons</h4>
-                        <ul>
-                          <li>
-                            Please make sure Google Material Icons already embeded in <code>app/index.html</code>.
-                            <br />
-                            If not just embed this inside head tag
-                            <pre><code class="language-markup">&lt;head&gt;
-      &lt;link href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;/head&gt;</code></pre>
-                          </li>
-                          <li>
-                            Connect to internet
-                          </li>
-                          <li>
-                            Import Material UI Icon to your component
-                            <pre><code class="language-js">import Icon from '@material-ui/core/Icon';</code></pre>
-                          </li>
-                          <li>
-                            Then add it inside render method. Example for use <code>access_time</code> icon
-                            <pre><code class="language-markup">&lt;Icon&gt;access_time&lt;Icon /&gt;</code></pre>
-                          </li>
-                        </ul>
-                        <br /><br /><br />
-                        <h4>Material SVG Icons</h4>
-                        It's interesting to have the building blocks needed to implement custom icons. This template use NPM package, @material-ui/icons, that includes the 900+ official Material icons converted to SvgIcon components.
-                        <br /><br />
-                        <ul>
-                          <li>
-                            Import all necessary icons form Material UI Icons library
-                            <pre><code class="language-js">import AccessTime from '@material-ui/icons/AccessTime';
-import Adjust from '@material-ui/icons/Adjust';
-import BatteryStd from '@material-ui/icons/BatteryStd';
-                            </code></pre>
-                          </li>
-                          <li>
-                            Use them as component in render method
-                            <pre><code class="language-js"> render() {
-  return (
-    &lt;div&gt;
-      &lt;AccessTime /&gt;
-      &lt;Adjust /&gt;
-      &lt;BatteryStd /&gt;
-    &lt;div /&gt;
-  );
-}
-                            </code></pre>
-                          </li>
-                        </ul>
-                        <br /><br /><br />
-                        <h4>Icons Source</h4>
-                        <ul>
-                          <li>
-                            You can explore more than 800 material icons at <a href="http://localhost:3000/app/ui/icons" target="_blank">UI Element &rsaquo; Icons</a>
-                            <br />
-                            <br />
-                            <img src="images/icons.png" width="600" alt="icon list" />
-                          </li>
-                          <li>
-                            And click one of icon, then the guide detail of using the icon will show
-                            <br /> <br />
-                            <img src="images/detail_icon.png" width="600" alt="icon list" />
-                          </li>
-                        </ul>
-                        
-                        <br /><br />
-                        Or from original source <a href="https://material.io/icons/" target="_blank">Google Material Icons</a>
-                    </div>
-                </section>
-                <!-- END -->
-              
                 <!-- CREDIT -->
                 <section class="row" id="credit">
                     <div class="col-lg-12">
@@ -2103,7 +2025,7 @@ import BatteryStd from '@material-ui/icons/BatteryStd';
                         <hr />
                         <article>
                             <strong>Fonts :</strong><br/>
-                            Lato<br /><br />
+                            Ubuntu<br /><br />
                             <strong>Preview Images Used</strong> 
                             <br />
                             <a href="http://unsplash.com/" target="_blank">Unsplash</a><br />
@@ -2116,169 +2038,120 @@ import BatteryStd from '@material-ui/icons/BatteryStd';
                             <table class="tg">
                               <tr>
                                 <th class="tg-yw4l">Name</th>
-                                <th class="tg-yw4l">Repository</th>
+                                <th class="tg-yw4l">Package Repository</th>
                                 <th class="tg-yw4l">License</th>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">@babel.js</td>
-                                <td class="tg-yw4l">https://github.com/babel/babel</td>
+                                <td class="tg-yw4l">carousel_slider</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/carousel_slider</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">@material-ui</td>
-                                <td class="tg-yw4l">https://github.com/mui-org/material-ui</td>
+                                <td class="tg-yw4l">change_case</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/change_case</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">axios</td>
-                                <td class="tg-yw4l">https://github.com/axios/axios</td>
+                                <td class="tg-yw4l">cupertino_icons</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/cupertino_icons</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">classnames</td>
-                                <td class="tg-yw4l">https://github.com/JedWatson/classnames</td>
+                                <td class="tg-yw4l">flutter</td>
+                                <td class="tg-yw4l">https://github.com/flutter/flutter</td>
+                                <td class="tg-yw4l">BSD-3-Clause license</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">flutter_form_builder</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_form_builder</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">draft-js</td>
-                                <td class="tg-yw4l">https://github.com/facebook/draft-js</td>
-                                <td class="tg-yw4l">BSD Licensed.</td>
+                                <td class="tg-yw4l">flutter_markdown</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_markdown</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">express</td>
-                                <td class="tg-yw4l">https://github.com/expressjs/express</td>
+                                <td class="tg-yw4l">flutter_sticky_header</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_sticky_header</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">firebase</td>
-                                <td class="tg-yw4l">https://github.com/firebase/firebase-js-sdk</td>
+                                <td class="tg-yw4l">flutter_svg</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_svg</td>
+                                <td class="tg-yw4l">MIT</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">flutter_svg_provider</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_svg_provider</td>
                                 <td class="tg-yw4l">Apache-2.0</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">history</td>
-                                <td class="tg-yw4l">https://github.com/ReactTraining/history</td>
+                                <td class="tg-yw4l">flutter_timer_countdown: ^1.0.7</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/flutter_timer_countdown</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">immutable</td>
-                                <td class="tg-yw4l">https://github.com/facebook/immutable-js</td>
+                                <td class="tg-yw4l">font_awesome_flutter</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/font_awesome_flutter</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">jss-rtl</td>
-                                <td class="tg-yw4l">https://github.com/alitaheri/jss-rtl</td>
+                                <td class="tg-yw4l">form_builder_validators</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/form_builder_validators</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">get</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/get</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">lodash</td>
-                                <td class="tg-yw4l">https://github.com/lodash/lodash</td>
+                                <td class="tg-yw4l">intl</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/intl</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">overlay_tooltip</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/overlay_tooltip</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
+                              </tr>
+                              <tr>
+                                <td class="tg-yw4l">photo_view</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/photo_view</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">material-ui-pickers</td>
-                                <td class="tg-yw4l">https://github.com/dmtrKovalenko/material-ui-pickers</td>
+                                <td class="tg-yw4l">pinput</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/pinput</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">moment</td>
-                                <td class="tg-yw4l">https://github.com/moment/moment</td>
+                                <td class="tg-yw4l">scroll_to_hide</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/scroll_to_hide</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">mocha</td>
-                                <td class="tg-yw4l">https://github.com/mochajs/mocha</td>
-                                <td class="tg-yw4l">MIT</td>
+                                <td class="tg-yw4l">shared_preferences</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/shared_preferences</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">mui-datatables</td>
-                                <td class="tg-yw4l">https://github.com/gregnb/mui-datatables</td>
-                                <td class="tg-yw4l">MIT</td>
+                                <td class="tg-yw4l">shimmer</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/shimmer</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">prop-types</td>
-                                <td class="tg-yw4l">https://github.com/facebook/prop-types</td>
-                                <td class="tg-yw4l">MIT</td>
+                                <td class="tg-yw4l">url_launcher</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/url_launcher</td>
+                                <td class="tg-yw4l">BSD-3-Clause</td>
                               </tr>
                               <tr>
-                                <td class="tg-yw4l">react</td>
-                                <td class="tg-yw4l">https://github.com/facebook/react</td>
+                                <td class="tg-yw4l">zoom_tap_animation</td>
+                                <td class="tg-yw4l">https://pub.dev/packages/zoom_tap_animation</td>
                                 <td class="tg-yw4l">MIT</td>
                               </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-autosuggest</td>
-                                <td class="tg-yw4l">https://github.com/moroshko/react-autosuggest</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-countup</td>
-                                <td class="tg-yw4l">https://github.com/glennreyes/react-countup</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-dropzone</td>
-                                <td class="tg-yw4l">https://github.com/react-dropzone/react-dropzone</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-google-maps</td>
-                                <td class="tg-yw4l">https://github.com/tomchentw/react-google-maps</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-helmet</td>
-                                <td class="tg-yw4l">https://github.com/nfl/react-helmet</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-hot-loader</td>
-                                <td class="tg-yw4l">https://github.com/gaearon/react-hot-loader</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-loading-bar</td>
-                                <td class="tg-yw4l">https://github.com/mironov/react-redux-loading-bar</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-markdown</td>
-                                <td class="tg-yw4l">https://github.com/rexxars/react-markdown</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-redux</td>
-                                <td class="tg-yw4l">https://github.com/reduxjs/react-redux</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-slick</td>
-                                <td class="tg-yw4l">https://github.com/akiran/react-slick</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">react-syntax-highlighter</td>
-                                <td class="tg-yw4l">https://github.com/conorhastings/react-syntax-highlighter</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">recharts</td>
-                                <td class="tg-yw4l">https://github.com/recharts/recharts</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">redux</td>
-                                <td class="tg-yw4l">https://github.com/reduxjs/redux</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">redux-form</td>
-                                <td class="tg-yw4l">https://github.com/erikras/redux-form-material-ui</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
-                              <tr>
-                                <td class="tg-yw4l">webpack</td>
-                                <td class="tg-yw4l">https://github.com/webpack/webpack</td>
-                                <td class="tg-yw4l">MIT</td>
-                              </tr>
+                              
                             </table>
                         </article>
                     </div>
@@ -2310,1278 +2183,10 @@ import BatteryStd from '@material-ui/icons/BatteryStd';
                         <h1>Change Log</h1>
                         <hr />
                         <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.2.2 – 18 Mar, 2025</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Docs: Add Redux Toolkit documentation for Sample Firebase App
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                Fixed: Fixed list sidebar on safari
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/components/Sidebar/index.js <br>
-                                - app/components/Sidebar/sidebar-jss.js <br>
-                                - app/containers/Templates/appStyles-jss.js <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.2.1 – 14 Oct, 2024</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Fixed: Login with firebase issue
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/containers/Pages/UsersFirebase/Login.js <br>
-                                - app/containers/Session/ProtectedPage.js <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.2.0 – 19 Aug, 2024</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Chore: Upgrade to Redux Toolkit
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - package.json <br>
-                                - app/redux/ <br>
-                                - app/utils/ <br>
-                                - app/containers/Templates/ <br>
-                                - app/containers/Pages/UsersFullstack/ <br>
-                                - app/containers/Pages/Users/ <br>
-                                - app/containers/Pages/Tables/ <br>
-                                - app/containers/Pages/SampleApps/ <br>
-                                - app/containers/Pages/Ecommerce/ <br>
-                                - app/containers/Pages/Chat/ <br>
-                                - app/containers/Pages/Timeline/ <br>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                Chore: Change Redux Form to Formik
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/containers/Forms/ <br />
-                                - app/components/Forms/ <br />
-                                - app/components/Contact/ <br />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                Chore: Change Redux Saga to Redux Toolkit Query
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/containers/Pages/SampleFirebaseApps/Todo <br>
-                                - app/containers/Pages/SampleFirebaseApps/Email <br>
-                                - app/containers/Pages/SampleFirebaseApps/Contact <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.1.0 – 2 Jul, 2024</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Chore: Update version for Webpack and another packages 
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - package.json <br>
-                                - internals/webpack/webpack.dll.babel.js <br>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                Chore: Upgrade react-router-dom v6
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - package.json <br>
-                                - app/redux/modules/authSagas.js <br>
-                                - app/redux/actions/authActions.js <br>
-                                - app/containers/pageListAsync.js <br>
-                                - app/containers/Templates/*.js <br>
-                                - app/containers/Session/*.js <br>
-                                - app/containers/Parent/*.js <br>
-                                - app/containers/App/*.js <br>
-                                - app/components/Sidebar/*.js <br>
-                                - app/components/Header/*.js <br>
-                                - app/components/Forms/*.js <br>
-                                - app/components/Error/ErrorWrap.js <br>
-                                - aapp/components/BreadCrumb/BreadCrumb.js <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.0.4 – 11 Mar, 2024</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Feature: Create unlimited menu level for sidebar
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/api/ui/menu.js <br>
-                                - app/components/Sidebar/MainMenu.js <br>
-                                - app/components/Sidebar/sidebar-jss.js <br>
-                                - aapp/redux/modules/ui.js <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.0.3 – 17 Sep, 2023</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Chore: Remove Hidden deprecated MUI component
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/components <br />
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.0.2 – 17 Apr, 2023</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Fixed: Responsive Issue
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/components/Email/EmailSidebar.js <br />
-                                - app/components/Header/Header.js <br />
-                                - app/components/Header/HeaderMenu.js <br />
-                                - app/components/Header/header-jss.js <br />
-                                - app/components/LandingPage/Banner.js <br />
-                                - app/components/LandingPage/Header.js <br />
-                                - app/components/LandingPage/Technology.js <br />
-                                - app/components/LandingPage/landingStyle-jss.js <br />
-                                - app/components/Sidebar/index.js <br />
-                                - app/components/SidebarBig/index.js <br />
-                                - app/components/Widget/ContactWidget.js <br />
-                                - app/containers/Pages/UserProfile/index.js <br />
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.0.1 – 12 Feb, 2023</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Fixed: Sidebar Mini UI Issue
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - app/components/Sidebar/sidebar-jss.js
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 2.0.0 – 6 Feb, 2023</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                Feature: Add Service Worker
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - package.json <br>
-                                - app/app.js <br>
-                                - internals/webpack/webpack.prod.babel.js <br>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                Chore: Upgrade to Material UI 5
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                File changes: <br>
-                                - package.json <br>
-                                - app/components/*.js <br>
-                                - app/containers/*.js <br>
-                                - app/styles/theme/applicationTheme.js <br>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
                             <thead>
                               <tr>
                                 <th>
-                                    <strong>Version 1.9.3 – 7 Nov, 2022</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Fixed: Node v18 error start and build
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - package.json <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Docs: Installation deprecation error
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.9.2 – 16 Oct, 2022</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chore: Remove unused dependencies
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - package.json <br />
-                                    - internals/config.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Docs: Redux Persist configuration
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.9.1 – 2 Jul, 2022</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chore: Update webpack loader dependencies
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - package.json <br />
-                                    - package-lock.json <br />
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.9 – 25 Mar, 2022</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chore: Upgrade to webpack 5
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - .npmrc <br />
-                                    - app/app.js <br />
-                                    - app/containers/App/index.js <br />
-                                    - app/containers/Forms/demos/DateTimeInput.js <br />
-                                    - app/redux/reducers.js <br />
-                                    - app/styles/theme/applicationTheme.js <br />
-                                    - internals/webpack/webpack.base.babel.js <br />
-                                    - internals/webpack/webpack.dev.babel.js <br />
-                                    - internals/webpack/webpack.prod.babel.js <br />
-                                    - package.json <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Bug views
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/containers/Widgets/demos/ChartInfographic.js <br />
-                                    - app/styles/theme/applicationTheme.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Fixed some deprecated dependecies
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - package.json <br />
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.8 – 14 Feb, 2022</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Feature: Redux-persist to connect state with local storage
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/app.js <br />
-                                    - app/redux/configureStore.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Migrate from immutable.js to immer.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/app.js <br />
-                                    - app/components/**/*<br />
-                                    - app/containers/**/*<br />
-                                    - app/redux/**/*<br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: update to react v17 and update another packages
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - package.json <br />
-                                    - app/components/**/*<br />
-                                    - app/containers/**/*<br />
-                                    - app/firebase/**/*<br />
-                                    - app/i18n.js<br />
-                                    - internals/webpack/webpack.base.babel.js<br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Docs: Add Google Maps setup
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.7 – 30 Aug, 2021</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Change autocomplete using material-ui/lab
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/containers/Forms/demos/AutoSuggest.js<br />
-                                    - app/containers/Forms/demos/HighlightSuggest.js<br />
-                                    - app/containers/Forms/demos/SelectSuggestionTags.js<br />
-                                    - app/containers/Forms/demos/SelectSuggestions.js<br />
-                                    - app/containers/Forms/demos/TagSuggestions.js<br />
-                                    - app/styles/theme/applicationTheme.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Update UI Components demo to react-hooks
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/containers/UiElements/demos/**/*.js<br />
-                                    - app/containers/UiElements/*.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Remove source map warning in devtool
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - internals/webpack/webpack.base.babel.js<br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Update depedencies
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    package.json<br />
-                                    - app/firebase/firebase.js<br />
-                                    - app/components/SourceReader/SourceReader.js<br />
-                                    - app/containers/UiElements/IconGallery/DetailIcon.js<br />
-                                    - app/containers/UiElements/demos/PopoverTooltip/PopoverPlayground.js<br />
-                                    - server/middlewares/addDevMiddlewares.js
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.6 – 7 Jun, 2021</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Fixed: AuthWrapper login redirection
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes:<br />
-                                    - app/redux/modules/authSagas.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Chart dimension warning
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  File changes: <br />
-                                  - app/containers/Charts/demos/*.js <br />
-                                  - app/components/Widget/*.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  Chore: Update react version and update some dependencies.
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  File changes: <br />
-                                  - package.json <br />
-                                  - app/index.html <br />
-                                  - app/styles/components/vendors/react-loading-bar/index.css <br />
-                                  - app/containers/App/ThemeWrapper.js <br />
-                                  - app/containers/Forms/demos/InlineWysiwyg.js <br />
-                                  - app/components/Tables/AdvTable.js <br />
-                                  - internals/scripts/dependencies.js <br />
-                                  - internals/webpack/webpack.base.babel.js <br />
-                                  - internals/webpack/webpack.prod.babel.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  Feature: change react-google-map to @react-google-maps/api
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  File changes: <br />
-                                  - app/containers/Maps/ <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  Disable offline access by default
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  File changes: <br />
-                                  - app/app.js <br />
-                                  - internals/webpack/webpack.prod.babel.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  Docs: Add guide how to enable offline access
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.5 – 23 Mar, 2021</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      Fixed: Big Menu navigation active issue in mobile screen
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes:<br />
-                                      - app/components/SidebarBig/MainMenuBig.js <br />
-                                      - app/components/SidebarBig/index.js
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Skeleton preloader animation
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes:<br />
-                                      - app/components/TodoList/todo-jss.js <br />
-                                      - app/components/Email/email-jss.js <br />
-                                      - app/components/Contact/contact-jss.js <br />
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Chore: Implement hooks lifecycle for Forms Demo
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes:<br />
-                                      - app/containers/Forms/*.js<br />
-                                      - app/containers/Forms/demo/*.js
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Chore: Implement hooks lifecycle for Widgets Demo
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes:<br />
-                                      - app/containers/Widgets/*.js<br />
-                                      - app/containers/Widgets/demo/*.js
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.4.3 – 13 Dec, 2020</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Fixed: Big Sidebar transition issue
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/SidebarBig/MainMenuBig.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: node-sass installation issue for node version 14
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - package.json <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Tables
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Tables/*.js <br />
-                                    - app/containers/Tables/*.js <br />
-                                    - app/containers/Tables/demos/*.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Pages
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/SocialMedia/*.js <br />
-                                    - app/containers/Pages/Timeline/index.js <br />
-                                    - app/containers/Pages/Timeline/reducers/timelineReducer.js <br />
-                                    - app/components/Chat/*.js <br />
-                                    - app/containers/Pages/Chat/index.js <br />
-                                    - app/components/Profile/*.js <br />
-                                    - app/containers/Pages/UserProfile/index.js <br />
-                                    - app/components/Product/*.js <br />
-                                    - app/components/Invoice/index.js <br />
-                                    - app/components/Comments/index.js <br />
-                                    - app/components/Rating/Rating.js <br />
-                                    - app/components/Forms/SideReview.js <br />
-                                    - app/containers/Pages/Ecommerce/*.js <br />
-                                    - app/containers/Pages/Maintenance/index.js <br />
-                                    - app/containers/Pages/Photos/index.js <br />
-                                    - app/containers/Pages/ComingSoon/index.js <br />
-                                    - app/containers/Pages/AuthenticatedPage/index.js <br />
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.4.2 – 15 Nov, 2020</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Landing Page
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/LandingPage/*js <br />
-                                    - app/containers/LandingPage/HomePage.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Dashboard
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/CardPaper/*.js <br />
-                                    - app/components/Counter/*.js <br />
-                                    - app/components/Widget/*.js <br />
-                                    - app/containers/Dashboard/AnalyticDashboard.js <br />
-                                    - app/containers/Dashboard/CryptoDashboard.js <br />
-                                    - app/containers/Dashboard/MarketingDashboard.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Sample Apps
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Contact/*.js <br />
-                                    - app/containers/SampleApps/Contact/index.js <br />
-                                    - app/containers/SampleFullstackApps/Contact/index.js <br />
-                                    - app/components/Email/*.js <br />
-                                    - app/containers/SampleApps/Email/index.js <br />
-                                    - app/containers/SampleFullstackApps/Email/index.js <br />
-                                    - app/components/TodoList/PlaceLoader.js <br />
-                                    - app/containers/SampleApps/Todo/index.js <br />
-                                    - app/containers/SampleFullstackApps/Todo/index.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Auth Pages
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Forms/LockForm.js <br />
-                                    - app/components/Forms/LoginForm.js <br />
-                                    - app/components/Forms/LoginFormFirebase.js <br />
-                                    - app/components/Forms/RegisterForm.js <br />
-                                    - app/components/Forms/RegisterFormFirebase.js <br />
-                                    - app/components/Forms/ResetForm.js <br />
-                                    - app/containers/Pages/Users/LockScreen.js <br />
-                                    - app/containers/Pages/Users/Login.js <br />
-                                    - app/containers/Pages/Users/Register.js <br />
-                                    - app/containers/Pages/Users/ResetPassword.js <br />
-                                    - app/containers/Pages/UsersFullstack/Login.js <br />
-                                    - app/containers/Pages/UsersFullstack/Register.js <br />
-                                    - app/containers/Pages/UsersFullstack/ResetPassword.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Chart
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/containers/Charts/*.js <br />
-                                    - app/containers/Charts/demos/PieCustomLabel.js <br />
-                                    - app/containers/Charts/demos/PieCustomShape.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Maps
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/containers/Maps/*.js <br />
-                                    - app/containers/Maps/demo/*.js <br />
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.4.1 – 18 Oct, 2020</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle fo Container Routes and Template
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/containers/App/*js <br />
-                                    - app/containers/Templates/*.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Chore: Implement hooks lifecycle for Main Components (Header, Sidebar, Big Sidebar, Search and Guide)
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Header/*.js <br />
-                                    - app/components/Sidebar/*.js <br />
-                                    - app/components/BigSidebar/*.js <br />
-                                    - app/components/Search/*.js <br />
-                                    - app/components/GuideSlider/*.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Error decoration alignment in mobile
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Error/ErrorWrap.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Selected item state on Sidebar Menu
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/components/Sidebar/MainMenu.js <br />
-                                    - app/components/Sidebar/index.js <br />
-                                    - app/components/Sidebar/sidebar-jss.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Floating form background issue in dark mode
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/styles/components/Form.scss <br />
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.4.0 – 23 Jul, 2020</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>
-                                    Feture: Add one level menu
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes <br />
-                                    - app/api/ui/menu.js <br />
-                                    - app/components/Header/ <br />
-                                    - app/components/Sidebar/ <br />
-                                    - app/components/SidebarBig/ <br />
-                                    - app/redux/actions/uiActions.js <br />
-                                    - app/redux/constants/uiConstants.js <br />
-                                    - app/redux/modules/uiReducer.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Changed: react-ionicons to ionicon font-icon
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  File changes <br />
-                                  - app/index.html <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: MUI-Table filter in mobile screen
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: app/redux/modules/uiReducer.js
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Twice render in main container
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: app/containers/Templates/layouts/ <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Todo add text box alignment
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: app/components/TodoList/todo-jss.js <br />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Redux form editing text
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: app/components/Contact/AddContact.js
-                                </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.3.2 – 9 Apr, 2020</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      Fixed: Collapsible sidebar in Safari
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes: <br>
-                                      - app/components/Sidebar/index.js <br>
-                                      - app/components/Sidebar/sidebar-jss.js <br>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Cannot clear redux form textfiled
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes: <br>
-                                      - app/components/Forms/ReduxFormMUI.js <br>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Missing image in gallery page
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes: <br>
-                                      - app/components/Gallery/photo-jss.js <br>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Not aligned CRUD Table icons
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes: <br>
-                                      - app/components/Tables/tableParts/DatePickerCell.js <br>
-                                      - app/components/Tables/tableParts/TimePickerCell.js
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Top navigation menu issue
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      File changes: <br>
-                                      - app/containers/Templates/Dashboard.js <br>
-                                      - app/components/Header/DropListMenu.js <br>
-                                      - app/components/Header/MegaMenu.js
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                          <thead>
-                            <tr>
-                              <th>
-                                  <strong>Version 1.3.1 – 29 Dec, 2019</strong>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                <td>
-                                    Fixed: Material UI Table responsive
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: <br>
-                                    - app/styles/theme/applicationTheme.js <br>
-                                    - app/containers/Tables/demos/AdvFilter.js <br>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    Fixed: Textfield adornment layout
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    File changes: <br>
-                                    - app/styles/theme/applicationTheme.js <br>
-                                    - app/containers/Forms/demos/InputAdornments.js <br>
-                                </td>
-                              </tr>
-                          </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.3 – 29 Nov, 2019</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      Chore: Update Material UI and more packages
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Upload Preview
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Add new data if data table is empty
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Open header menu issue
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Redux form typing experience
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Datepicker localizations
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.2.5 – 28 Aug, 2019</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      Feature: Add tree view and tree table redux
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Feature: Add pure Front-End page for Auth pages (Login, Register, Reset Password)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      UI Changed: Use Maven Pro as primary font-family replace Lato
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Fixed: Avatar space margin in List
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.2 – 20 Jul, 2019</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      Chore: Upgrade to Material UI v4.2
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Chore: Upgrade Dropzone to v10.1.5
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      Feature: Add new 3 variant theme (Light Blue, Light Green, and Brown)
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      UI Changes: Redesign counter widget.
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.1 – 25 May, 2019</strong>
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                  <td>
-                                      New Feature: Cryptocurrency Dashboard
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      New Feature: Widget Collections
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      New Feature Social Media Page: Timeline and Chat
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>
-                                      New Feature Ecommerce Page: Product, Checkout and Invoice
-                                  </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table table-striped log">
-                            <thead>
-                              <tr>
-                                <th>
-                                    <strong>Version 1.0 – 13 May, 2019</strong>
+                                    <strong>Version 1.0 – 25 Apr, 2025</strong>
                                 </th>
                               </tr>
                             </thead>
