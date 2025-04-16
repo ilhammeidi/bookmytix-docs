@@ -69,37 +69,29 @@
                 <li>
                     <a href="#shoot">Troubleshooting</a>
                 </li>
-                <li><h3>Start Coding</h3></li>
+                <li><h3>Customisation</h3></li>
                 <li>
                     <a href="#code_basic">Basic Code Structure</a>
                 </li>
                 <li>
-                    <a href="#starter">Starter Project <span class="badge badge-danger">HOT</span></a>
+                    <a href="#change_app">Change App Logo &amp; Name</a>
                 </li>
                 <li>
-                    <a href="#layout">UI and Languages </a>
+                    <a href="#create_screen">Create Widget and Screen</a>
                 </li>
                 <li>
-                    <a href="#create_page">Create Page and Component</a>
+                    <a href="#theme">Theme and Layout</a>
                 </li>
                 <li>
-                    <a href="#crud">CRUD Apps and Auth</a>
+                    <a href="#font">Fonts and Color</a>
                 </li>
-                <li>
-                    <a href="#code">Direct Code Preview <span class="badge badge-danger">HOT</span></a>
-                </li>
-                <li>
-                    <a href="#eslint">Clean Code (Eslint)</a>
-                </li>
-                <li>
-                    <a href="#gmaps">Google Maps API</a>
-                </li>
+                
                 <li><h3>Additional Info</h3></li>
                 <li>
-                    <a href="#reference">External Reference</a>
+                    <a href="#reference">Install Dependencies</a>
                 </li>
                 <li>
-                    <a href="#font">Fonts and Icons</a>
+                    <a href="#reference">External Reference</a>
                 </li>
                 <li>
                     <a href="#credit">Sources and Credits</a>
@@ -125,7 +117,7 @@
                         <h1 class="title">Thank you for Purchasing </h1>
                         <br /><br />
                         <h3>BookMyTix - Flutter Flight Booking App UI Kit</h3>
-                        <h4>Version 2.2.2</h4>
+                        <h4>Version 1.0.0</h4>
                         <hr />
                         <ul>
                             <li>
@@ -331,6 +323,20 @@ flight_app
                     <div class="col-lg-10">
                         <h1>Environment Setup</h1>
                         <hr />
+                        <h3>Prerequisites</h3>
+                        <ul class="wp-block-list">
+                          <li><a href="https://code.visualstudio.com/docs/setup/windows">Visual Studio Code</a> 1.86 or later with the <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter extension for VS Code</a>.</li>
+                          <li>Xcode 16.2 for iOS build (For Mac OS only)</li>
+                          <li><a href="https://developer.android.com/studio/archive" target="_blank" rel="noopener">Android Studio</a> Android Studio Ladybug Feature Drop | 2024.2.2 RC 2 December 16, 2024 (Recomended) </li>
+                          
+                          <li>Flutter SDK setup (version 3.29.0 Stable)</li>
+
+                          <li>JDK with path setup (only for vs code)</li>
+
+                          
+                        </ul>
+                        <br /><hr />
+                        <br />
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                           <li class="nav-item">
                             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#env_windows" role="tab" aria-controls="pills-home" aria-selected="true">WINDOWS</a>
@@ -1158,23 +1164,26 @@ flight_app
                         <hr />
                         <h3>Install Dependencies</h3>
                         <br />
-                        BookMyTix is built on <a href="https://flutter.dev/" target="_blank">Flutter</a>
+                        BookMyTix is built on <a href="https://flutter.dev/" target="_blank">Flutter</a>. To begin, it’s essential to verify that your Flutter and Integrated Development Environment (IDE) setup has been configured accurately
 						<ul>
                           <li>Connect to the internet</li>
+                          <li>Execute the command <kbd>flutter doctor</kbd> in your terminal. If any issues arise during this process, make sure to address and resolve them promptly.</li>
                           <li>
                             Then open your project. Once the project is open, VS Code may prompt you to install the dependencies. 
                             Click Install Dependencies
                           </li>
-                          <li>If not, you can run the flutter 
-                            <kbd>pub get</kbd> from the terminal in the project directory to fetch the dependencies.</li>
+                          <li>If not, you can run the  
+                            <kbd>flutter pub get</kbd> from the terminal in the project directory to fetch the dependencies.</li>
                           <li>And for the another way, you can open <code>pubspec.yaml</code></li>
                           <li>
                             Click icon
                             <span class="icon">
                               <i class="glyphicon glyphicon-download-alt"></i>
                             </span>
+                            on top right corner
                           </li>
                           <li>Wait until dependencies installation finish</li>
+                          <li>After the dependencies are installed, you should be able to run the app.</li>
 						</ul>
                         <br />
                       
@@ -1182,10 +1191,17 @@ flight_app
                         <ul>
                           <li>Using VS Code's built-in debugging features, such as setting breakpoints.</li>
                           <li>Open <code>lib/main.dart</code></li>
-                          <li>Click menu <strong>Run</strong> &gt; <strong>Start Debuging (F5)</strong> </li>
-                          <li>Selecting a target device. When a Flutter project is open in VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or the message No Devices)</li>
+                          <li>
+                            Click menu <strong>Run</strong> &gt; <strong>Start Debuging (F5)</strong>
+                            <br />
+                            <img src="images/run.png" width="500" alt="run" />
+                          </li>
+                          <li>
+                            Selecting a target device. When a Flutter project is open in VS Code, you should see a set of Flutter specific entries in the status bar, including a Flutter SDK version and a device name (or the message No Devices)
+                            <br />
+                            <img src="images/device.png" width="500" alt="device" />
+                          </li>
                         </ul>
-                        <img src="images/run.png" alt="run" />
                         <br />
                     </div>
                 </section>
@@ -1437,534 +1453,523 @@ Expand Signing, then Select Team
                     <div class="col-lg-12">
                         <h1>Basic Code Structure</h1>
                         <hr />
-                        <h4>Main HTML</h4>
-                        <p>The HTML root in <code>/app/index.html</code></p>
-                        <img src="images/ss_code.png" width="800" alt="code" />
-                        <p>You can put google analytics, font icon, embeded fonts, etc here.</p>
-                        <br />
-                        <br />
-                        <h4>Main JS</h4>
-                        <p>The JS root in <code>/app/app.js</code>. This is the entry file for the application, only setup and boilerplate code.</p>
-                        <img src="images/ss_code2.png" width="800" alt="code2" />
-                        <br />
-                        <br />
-                        <br />
-                        <h4>Directory Alias</h4>
-                        <p>You can find directory alias settings in <code>/internals/webpack/webpack.base.babel.js</code></p>
-                        <table class="tg">
-                          <thead>
-                            <tr>
-                              <th class="tg-yw4l">Name</th>
-                              <th class="tg-yw4l">Alias</th>
-                              <th class="tg-yw4l">Directory</th>
-                              <th class="tg-yw4l">Sample Use</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>UI Components</td>
-                              <td><strong>enl-components</strong></td>
-                              <td>app/components/</td>
-                              <td><code>import { CrudTable, Notification } from 'enl-components';</code></td>
-                            </tr>
-                            <tr>
-                              <td>Reducer</td>
-                              <td><strong>enl-redux</strong></td>
-                              <td>app/redux/</td>
-                              <td><code>import { loginWithEmail } from 'enl-redux/actions/authActions';</code></td>
-                            </tr>
-                            <tr>
-                              <td>Component Style Overider</td>
-                              <td><strong>enl-styles</strong></td>
-                              <td>app/styles/components/</td>
-                              <td><code>import css from 'enl-styles/Table.scss';</code></td>
-                            </tr>
-                            <tr>
-                              <td>API</td>
-                              <td><strong>enl-api</strong></td>
-                              <td>app/api/</td>
-                              <td><code>import brand from 'enl-api/dummy/brand';</code></td>
-                            </tr>
-                            <tr>
-                              <td>Images</td>
-                              <td><strong>enl-images</strong></td>
-                              <td>public/images/</td>
-                              <td><code>import decorationDark from 'enl-images/logo.png';</code></td>
-                            </tr>
-                            <tr>
-                              <td>3rd Party Vendors</td>
-                              <td><strong>enl-vendor</strong></td>
-                              <td>node_modules/</td>
-                              <td><code>import css from 'enl-vendor/react-draft-wysiwyg/dist/react-draft-wysiwyg.css';</code></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <br />
-                        <br />
-                        <br />
-                        <h4>Template Architecture</h4>
+                        <h4>Main</h4>
+                        <p><code>/lib/main.dart</code> We know that any programming language has the main entry point. This means that this is where our program first gets programmatically executed. So in dart we also have this, main () function.</p>
+                        <img src="images/main1.png" width="300" alt="code" />
+                        &nbsp;
+                        <img src="images/main2.png" width="400" alt="code" />
                         <p>
-                          This is template architecture in diagram visuailzation. Click diagram or full screen button <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAADgKxmiAAAABXRSTlMA758vX1Pw3BoAAABJSURBVAjXY8AJQkODGBhUQ0MhbAUGBiYY24CBgRnGFmZgMISwgwwDGRhEhVVBbAVmEQYGRwMmBjIAQi/CTIRd6G5AuA3dzYQBAHj0EFdHkvV4AAAAAElFTkSuQmCC" alt="full screen" />
-                          to show in new tab with full screen
-                      </p>
-                        <iframe frameborder="0" style="width:100%;height:580px;" src="./diagram/architecture.html"></iframe>
+                          This template uses <strong>GetX</strong>, so we added "Get" before your MaterialApp, turning it into GetMaterialApp.
+                          This does not modify the MaterialApp of the Flutter, GetMaterialApp is not a modified MaterialApp, it is just a pre-configured Widget, which has the default MaterialApp as a child. 
+                          GetMaterialApp is necessary for routes, snackbars, internationalization, bottomSheets, dialogs, and high-level apis related to routes and absence of context.
+                          <a href="https://pub.dev/packages/get" target="_blank">See more references about GetX</a>
+                        </p>
                     </div>
                 </section>
                 <!-- END -->
               
-              <!-- STARTER PROJECT -->
-                <section class="row" id="starter">
-                    <div class="col-lg-10">
-                        <h1>Starter Project</h1>
-                        <hr />
-                        This source code made for you who want build app from scratch without without being distracted from innate feature.
-                        In other word it's an initial(empty) project with built in configuration setup.
-                        <br /><br />
-                        <ul>
-                          <li>You can go through to <code>starter-project/</code> folder</li>
-                          <li>Connect to the internet</li>
-                          <li>Open Terminal</li>
-                          <li>The next installation process are same like was described above</li>
-                          <li>
-                              Install module dependencies by run this script in terminal
-                              <pre><code class="language-js">npm install</code></pre>
-                              It will download some necessary dependencies, it could take some minutes, just wait until finish.
-                          </li>
-                          <li>
-                                <strong>Build Webpack DLL dependencies(If necessary)</strong><br>
-								Install module dependencies by run this script in terminal. This process ussualy done by 'npm install', but if system require it just run this command:
-								<pre class=" language-js"><code class=" language-js">npm run build<span class="token punctuation">:</span>dll</code></pre>
-							</li>
-                          <li>
-                              <strong>Run App</strong><br>
-                              After build static library, then run the app.
-                              <pre class=" language-js"><code class=" language-js">npm start</code></pre>
-                              <br>
-                              <img src="images/cmd1.png" width="600" alt="process">
-                              <br>
-                              <em>INFO: <br>
-                                  - Just run this script whenever you want start the project.<br>
-                                  - Run <code>npm install</code> again if you have new module dependencies,<br>
-                              </em>
-                          </li>
-                          <li>Navigate to <a href="http://localhost:3001" target="_blank">http://localhost:3001</a></li>
-                          <li>After this you can can start develop your app with this initial project. And will bo more suitable when use enlite-prime as a reference</li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- END -->
-              
-              <!-- Layout -->
-                <section class="row" id="layout">
-                    <div class="col-lg-10">
-                      <h1>UI and Languages</h1>
-                      <hr />
-                      Follow this guide bellow to modify user interface, branding identity and default language.
-                      <div class="part-categories">
-                        <div class="row">
-                          <div class="col-sm-3">
-                            <a href="code_flow/ui_lang.html#brand" target="_blank">
-                              <span class="icon">
-                                <i class="glyphicon glyphicon-flag"></i>
-                              </span>
-                              Brand/Project Name
-                            </a>
-                          </div>
-                          <div class="col-sm-3">
-                            <a href="code_flow/ui_lang.html#menu" target="_blank">
-                              <span class="icon">
-                                <i class="glyphicon glyphicon-list"></i>
-                              </span>
-                              Navigation Menu
-                            </a>
-                          </div>
-                          <div class="col-sm-3">
-                            <a href="code_flow/ui_lang.html#theme" target="_blank">
-                              <span class="icon">
-                                <i class="glyphicon glyphicon-tint"></i>
-                              </span>
-                              Change Layout(RTL) and Theme
-                            </a>
-                          </div>
-                          <div class="col-sm-3">
-                            <a href="code_flow/ui_lang.html#lang" target="_blank">
-                              <span class="icon">
-                                <i class="glyphicon glyphicon-font"></i>
-                              </span>
-                              Set Language
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </section>
-                <!-- END -->
-				
-              <!-- CREATE PAGE -->
-                <section class="row" id="create_page">
+                <!-- CHANGE LOGO AND NAME -->
+                <section class="row" id="change_app">
                     <div class="col-lg-12">
-                        <h1>Create New Page</h1>
+                        <h1>Change App Logo and Name</h1>
                         <hr />
-                        <ul>
-                            <li>Go to <code>app/containers/</code></li>
-                            <li>Create new folder ex: <b>MyPage</b>. <em>The name must in capitalize</em></li>
-                            <li>Create new js file inside that folder <b>MyPage</b>, ex <code>SamplePage.js</code>. <em>The name must in capitalize</em></li>
-                            <li>
-                              Inside the file create a simple page HTML ex: <br />
-                              <pre><code class="language-js">// file: app/containers/MyPage/SamplePage.js
+                        <p>To change <strong>App logo</strong> and <strong>App Icon</strong> you need to follow these steps :</p>
+                        <h5>App Logo</h5>
+                        <ul class="wp-block-list">
+                          <li>Go to <code>&lt;project&gt;/assets/images/</code> and replace <strong>app_logo.png</strong> with your own logo.</li>
+                          <li>Recomended size is 1024x1024 pixels</li>
+                        </ul>
+                        <br />
+                        <br />
+                        <br />
+                        <h5>App Icon</h5>
+                        <p>You can generate your app icon using this site <a href="https://www.appicon.co" target="_blank" rel="noopener">appicon.co</a></p>
+                        <ul class="wp-block-list">
+                          <li>For Android go to <strong>/android/app/src/main/res</strong> and replace all mipmap folders with your <strong>&lt;generated icon&gt;/android</strong> folder.</li>
+                          <li>For iOS go to<strong> /ios/Runner/Assets.xcassets</strong> and replace <strong>AppIcon.appiconset</strong> with your generated <strong>Assets.xcassets</strong> folder.</li>
+                        </ul>
+                        <br />
+                        <br />
+                        <br />
+                        <h5>App Name</h5>
+                        <p>You need to set your app name in three different places.</p>
+                        <ul class="wp-block-list">
+                          <li>
+                            Go to <code>&lt;project&gt;/lib/constants/app_const.dart</code> and set the value of <strong>branding.name</strong>
+                            <pre class="language-js"><code class="language-js">// Project
+Company branding = Company(
+  id: '1',
+  name: 'Flight App',
+  // rest code
+);</code></pre>
+                          </li>
+                          <li>
+                            Change the value of<strong> label </strong>from <code>&lt;project&gt;/android/app/src/main/AndroidManifest.xml</code>
+                            <pre class="language-js"><code class="language-js">android:label="YOUR_APP_NAME"</code></pre>
+                          </li>
+                          <li>
+                            Change the value of <strong>CFBundleName</strong> from <code>&lt;project&gt;/iOS/Runner/info.plist</code>
+                            <pre class="language-js"><code class="language-js">
+&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;YOUR_APP_NAME&lt;/string&gt;
+&lt;key&gt;CFBundleName&lt;/key&gt;
+&lt;string&gt;YOUR_APP_NAME&lt;/string&gt;                         
+                            </code></pre>
+                          </li>
+                        </ul>
+                        <br />
+                        <br />
+                        <br />
+                        <h5>Change App Package</h5>
+                        <ol>
+                          <li>First, you have to find out the existing package name. </li>
+                          <li>You can find it out from the top of the <strong><strong>android/app/src/main/AndroidManifest.xml</strong></strong> file.</li>
+                          <li>Now right-click on the project folder and click on replace in the path. You will get a popup window with two input boxes. In the first box, you have to put the existing package name that you saw in the <strong>AndroidManifest.xml</strong> file previously and write down your preferred package name in the second box</li>
+                          <li>And then click on the <strong>Replace All</strong> button.</li>
+                        </ol>
+                    </div>
+                </section>
+                <!-- END -->
+              
+              <!-- SCREEN AND WIDGETS -->
+              <section class="row" id="create_screen">
+                <div class="col-lg-10">
+                  <h1>Create Widgets and Screen</h1>
+                  <hr />
+                  <h3>Create new widget</h3>
+                  <ol>
+                    <li>Open VS Code and create new dart file in <code>lib/widgets</code>. For example <code>my_widget.dart</code></li>
+                    <li>
+                      Open the file, then start type <code>stl</code> then pres <kbd>crtl or control</kbd> + <kbd>space</kbd>.
+                      Then the autocomplete options will show and choose <strong>Flutter Stateless Widget</strong> or <strong>Flutter Stateful Widget</strong>
+                      <br />
+                      <img src="images/stl.png" alt="stl" width="500" />
+                      <br />
+                      Here's the references for Flutter Widget type: <a target="_blank" href="https://docs.flutter.dev/ui/interactivity#stateful-and-stateless-widgets">https://docs.flutter.dev/ui/interactivity#stateful-and-stateless-widgets</a>
+                      <br />
+                    </li>
+                    <li>
+                      In this documentation, lets choose Flutter Stateless Widget. And will autometically generated this code
+                      <pre class=" language-js">
+                        <code class=" language-js">
+// lib/widgets/my_widget.dart
 
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { PapperBlock } from 'enl-components';
+import 'package:flutter/material.dart';
 
-class SamplePage extends React.Component {
-  render() {
-    const title = 'BookMyTix. Blank Page';
-    const description = 'BookMyTix';
-    return (
-      &lt;div&gt;
-        &lt;Helmet&gt;
-          &lt;title&gt;{title}&lt;/title&gt;
-          &lt;meta name="description" content={description} /&gt;
-          &lt;meta property="og:title" content={title} /&gt;
-          &lt;meta property="og:description" content={description} /&gt;
-          &lt;meta property="twitter:title" content={title} /&gt;
-          &lt;meta property="twitter:description" content={description} /&gt;
-        &lt;/Helmet&gt;
-        &lt;PapperBlock title="Blank Page" desc="Some text description"&gt;
-          Content
-        &lt;/PapperBlock&gt;
-      &lt;/div&gt;
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+                        </code>
+                      </pre>
+                    </li>
+                    <li>
+                      Start build your widget inside <code>Widget build</code>
+                      <pre class="language-js">
+                        <code class="language-js">
+// lib/widgets/my_widget.dart
+
+import 'package:flutter/material.dart';
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16.0),
+      color: Colors.blue,
+      child: const Text(
+        'Hello, World!',
+        style: TextStyle(color: Colors.white, fontSize: 18),
+      ),
     );
   }
 }
+                        </code>
+                      </pre>
+                    </li>
+                  </ol>
+                  <br />
+                  <br />
+                  <br />
+                  <h3>Create new screen</h3>
+                  <ol>
+                    <li>Basically screen is widget. The screen contain some related widgets and it's registered to the application routing.</li>
+                    <li>Open VS Code and create new dart file in <code>lib/screens</code>. For example <code>my_screen.dart</code></li>
+                    <li>
+                      Open the file, then start type <code>stl</code> then pres <kbd>crtl or control</kbd> + <kbd>space</kbd>.
+                      Then the autocomplete options will show and choose <strong>Flutter Stateless Widget</strong> or <strong>Flutter Stateful Widget</strong>
+                      <br />
+                      <img src="images/stl.png" alt="stl" width="500" />
+                      <br />
+                      Here's the references for Flutter Widget type: <a target="_blank" href="https://docs.flutter.dev/ui/interactivity#stateful-and-stateless-widgets">https://docs.flutter.dev/ui/interactivity#stateful-and-stateless-widgets</a>
+                      <br />
+                    </li>
+                    <li>
+                      Choose Flutter Stateless Widget. And use <code>Scaffold</code> widget to enable the basic screen layout like <strong>AppBar, BottomNav, Back Nav, Action Button, Drawer, etc</strong>.
+                      Don't forget to add <code>MyWidget</code> that we created before to this screen
+                      <pre class="language-js">
+                        <code class="language-js">
+// lib/screens/my_screen.dart
 
-export default SamplePage;
+import 'package:flutter/material.dart';
+import 'package:flight_app/widgets/my_widget.dart';
 
-</code></pre>
-                            </li>
-                          <li>
-                            Import it asynchronously to the routing. Open file <code>app/containers/pageListAsync.js</code>
-                                <pre><code class="language-js">// app/containers/pageListAsync.js
+class MyScreen extends StatelessWidget {
+  const MyScreen({super.key});
 
-export const SamplePage = Loadable({
-  loader: () => import('./MyPage/SamplePage'),
-  loading: Loading,
-});</code></pre>
-                              </li>
-                              <li>
-                                Load it inside the template. In this example we'll use in dashboard template. Open file <code>app/containers/App/Application.js</code>
-                                <pre><code class="language-js">// file: app/containers/App/Application.js
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Widget'),
+      ),
+      body: const MyWidget()
+    );
+}                        
+                        </code>
+                      </pre>
+                    </li>
+                    <li>
+                      Registering screen to app router. Open <code>lib/app/app_routes.dart</code>.
+                      Then add new routing to <code>MyScreen</code> with <code>'/myscreen'</code> path
+                      <pre class="language-js">
+                        <code class="language-js">
+import 'package:flight_app/screens/my_screen.dart';
 
-import { SamplePage } from '../pageListAsync';
-class Application extends React.Component {
-  render() {
-    const { changeMode } = this.props;
-    return (
-      &lt;Dashboard history={this.props.history} changeMode={changeMode}&gt;
-        &lt;Switch&gt;
-          &lt;Route exact path="/app/sample-page" component={SamplePage} /&gt;
-        &lt;/Switch&gt;
-      &lt;/Dashboard&gt;
+final List&lt;GetPage&gt; appRoutes = [
+  GetPage(
+    name: '/myscreen',
+    page: () => GeneralLayout(content: MyScreen()),
+  ),
+  // rest code
+]
+                        </code>
+                      </pre>
+You can also put the string path to <code>lib/app/app_link</code>                      
+                    </li>
+                    <li>
+                      Now you can navigate to the MyScreen from anywhere. Example for navigation to the <code>MyScreen</code> when button onPress/onTap
+                      <pre class="language-js">
+                        <code class="language-js">
+FilledButton(
+  onPressed: () {
+    Get.toNamed('/myscreen');
+    // You can also use AppLink if you already registered the route path to lib/app/app_link.dart
+    // Get.toNamed(AppLink.myScreen);
+  },
+  child: Text('Go to My Screen'),
+)
+                        </code>
+                      </pre>
+                    </li>
+                  </ol>
+                  
+                </div>
+            </section>
+            <!-- END -->
+              
+              
+            <!-- THEME AND LAYOUT -->
+            <section class="row" id="theme">
+                <div class="col-lg-12">
+                    <h1>Theme and Layout</h1>
+                    <hr />
+                    <h4>Theme Data</h4>
+                    <code>/lib/ui/themes/theme_data.dart</code>
+                    <p>Theme Data class defines the configuration of the overall visual Theme for a MaterialApp or a widget subtree within the app.
+                      The MaterialApp theme property can be used to configure the appearance of the entire app. Widget subtrees within an app can override the app's theme by including a Theme widget at the top of the subtree.</p>
+                  
+                    <p>Theme Data can handle dynamic color base on Dark on Light Mode Device. All Theme Data values, can be accessed from <code>/lib/ui/themes/theme_palette.dart</code> with <code>colorScheme(context)</code></p>
+                    <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_palette.dart';
+
+Container(
+  height: 100,
+  padding: EdgeInsets.all(spacingUnit(2)),
+  decoration: BoxDecoration(
+    color: colorScheme(context).primaryContainer,
+  ),
+  child: const Text('Lorem ipsum dolor')
+),
+                    </code></pre>
+                  <p>The background color will adapt to the device light/dark mode. The primary color will be lighten on light mode and darken when dark mode</p>
+                  <br />
+                  <br />
+                  
+                  <h4>Theme Button</h4>
+                  <code>/lib/ui/themes/theme_button.dart</code>
+                  <p>This is a global styling for variant buttons style including sizes and colors</p>
+                  <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_button.dart';
+
+FilledButton(
+  onPressed: () {},
+  style: ThemeButton.btnBig.merge(ThemeButton.primary),
+  child: const Text('SAVE', style: ThemeText.subtitle2)
+),
+                  </code></pre>
+                  <br />
+                  <img src="images/btn.png" alt="button" />
+                  <br />
+                  <br />
+                  <br />
+                  <h4>Theme Spacing</h4>
+                  <code>/lib/ui/themes/theme_spacing.dart</code>
+                  <ul>
+                    <li>
+                      <p><strong>Spacing unit uses</strong> for padding, margin, and other spacing to make ui consistent. The spacing unit base on 8px, that mean if you use <code>spacingUnit(3)</code> it's equal <strong>24px</strong></p>
+                      <pre><code class="language-js">
+    import 'package:flight_app/ui/themes/theme_spacing.dart';
+
+    Container(
+      height: 100,
+      padding: EdgeInsets.all(spacingUnit(3)),
+      child: const Text('Lorem ipsum dolor')
+    ),                    
+                      </code></pre>
+                    </li>
+                    <li>
+                      <strong>Vertical Spacing</strong> is a Blank Space Widget uses for vertical separator between section.
+                      <br />
+                      <ul>
+                        <li><code>VSpaceShort()</code>: 16px</li>
+                        <li><code>VSpace()</code>: 24px</li>
+                        <li><code>VSpaceBig()</code>: 48px</li>
+                      </ul>
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_spacing.dart';
+
+Column(
+  children: [
+    const MyWidget(),
+    const VSpace(),
+    const OtherWidget(),
+  ]
+);
+                      </code></pre>
+                    </li>
+                  </ul>
+                  
+                  <br />
+                  <br />
+                  <br />
+                  <h4>Theme Breakpoints</h4>
+                  <code>/lib/ui/themes/theme_breakpoints.dart</code>
+                  <p>Theme Breakpoints is helper class to check screen size and layout constraint </p>
+                  <ul>
+                    <li>
+                      <strong>ThemeSize</strong>: This class has static values that defined every common screen sizes
+                      <pre><code class="language-js">
+class ThemeSize {
+  static double xs = 480;
+  static double sm = 600;
+  static double md = 768;
+  static double lg = 960;
+  static double xl = 1280;
+  static double xxl = 1536;
+}                      
+                      </code></pre>
+                      <br />
+                      <p>Example usage:</p>
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_breakpoints.dart';
+
+ConstrainedBox(
+  constraints: BoxConstraints(
+    maxWidth: ThemeSize.sm 
+  ),         
+)
+                      </code></pre>
+                    </li>
+                    <li>
+                      <strong>ThemeBreakpoints</strong>: This class is used to check screen size. It has 2 type, <strong>up</strong> to check minimum size of screen and <strong>down</strong> to check maximum size of screen.
+                      In this template mostly using <strong>up</strong> for <em>Mobile First Responsive</em>.
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
+
+Container(
+  height: ThemeBreakpoints.mdUp(context) ? 280 : 320, 
+)
+                      </code></pre>
+                    </li>
+                    <li>
+                      <strong>ThemeConstraint</strong>: This class similiar like ThemeBreakpoints, but it has <code>constraint</code> parameter.
+                      You can use it with <code>LayoutBuilder</code> to get and set the <code>constraint</code> value.
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
+
+LayoutBuilder(
+  builder: (context, constraints) {
+    return Container(
+      height: ThemeConstraint.mdUp(constraints) ? 280 : 320, 
     )
   }
-}</code></pre>
-                              </li>
-                              <li>Then you can access it at <a href="http://localhost:3000/app/sample-page">http://localhost:3000/app/sample-page</a></li>
-                              <li>Also you can put the a usual link inside &lt;a /&gt; or material button. <a href="http://localhost:3000/app/forms/buttons" target="_blank">See this documentation</a></li>
-                            </ul>
-                        <br />
-                        <br />
-                    </div>
-                  <br /><br />
-                  <h4>Routing Architecture</h4>
-                        <p>
-                          This is Routing architecture in diagram visuailzation. Click diagram or full screen button <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAADgKxmiAAAABXRSTlMA758vX1Pw3BoAAABJSURBVAjXY8AJQkODGBhUQ0MhbAUGBiYY24CBgRnGFmZgMISwgwwDGRhEhVVBbAVmEQYGRwMmBjIAQi/CTIRd6G5AuA3dzYQBAHj0EFdHkvV4AAAAAElFTkSuQmCC" alt="full screen" />
-                          to show in new tab with full screen
-                      </p>
-                      <iframe frameborder="0" style="width:100%;height:560px;" src="./diagram/routing_architecture.html"></iframe>
-                </section>
-                <!-- END -->
-              
-				<!-- CREATE COMPONENT -->
-                <section class="row" id="create_component">
-                    <div class="col-lg-12">
-                        <h1>Create New Component</h1>
-                        <hr />
-                        <ul>
-                          <li>Go to <code>app/components/</code></li>
-                          <li>Create new folder ex: <b>MyComponent</b>. <em>The name must in capitalize</em></li>
-                          <li>Create new js file inside that folder <b>MyComponent</b>, ex <code>SampleComponent.js</code>. <em>The name must in capitalize</em></li>
-                          <li>
-                              Inside the file create a simple ES6 Class ex: <br />
-                              <pre><code class="language-js">// file: app/components/MyComponent/SampleComponent.js
+);
+                      </code></pre>
+                    </li>
+                    <li>
+                      <strong>ThemeConstraint</strong>: This class similiar like ThemeBreakpoints, but it has <code>constraint</code> parameter.
+                      You can use it with <code>LayoutBuilder</code> to get and set the <code>constraint</code> value.
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
 
-import React from 'react';
-
-class SampleComponent extends React.Component {
-  render() {
-    return (
-      &lt;H1&gt;Hello World&lt;/H1&gt;
-    );
+LayoutBuilder(
+  builder: (context, constraints) {
+    return Container(
+      height: ThemeConstraint.mdUp(constraints) ? 280 : 320, 
+    )
   }
-}
+);
+                      </code></pre>
+                    </li>
+                  </ul>
+                  
+                  <br />
+                  <br />
+                  <br />
+                  <h4>Theme Radius and Shadow</h4>
+                  <code>/lib/ui/themes/theme_radius.dart</code> and <code>/lib/ui/themes/theme_shadow.dart</code>
+                  <br />
+                  <img src="images/shade_radius.png" alt="shade" />
+                  <br />
+                  <ul>
+                    <li>
+                      <strong>Theme Radius</strong> is a <code>BorderRadiusGeomentry</code> using <code>BorderRadius.circular</code> which has same radius value on each corner
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_radius.dart';
 
-export default SampleComponent;
+Container(
+  decoration: BoxDecoration(
+    borderRadius: ThemeRadius.small,
+    color: Colors.amber,
+  ),
+)
+                      </code></pre>
+                    </li>
+                    <li>
+                      <strong>Theme Shadow</strong> is the global style for shadow <code>shadeSoft</code>, <code>shadeMedium</code>, and <code>shadeHard</code>
+                      <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_shadow.dart';                      
 
-</code></pre>
-                            </li>
-                            <li>Register it to index. Open file <code>app/components/index.js</code></li>
-                            <li>
-                              Import that component<br />
-                              <pre><code class="language-js">
-// file: app/components/index.js
-
-import SampleComponent from './MyComponent/SampleComponent';
-                              </code></pre>
-                            </li>
-                            <li>Open a <b>target page</b> where you want use it. Ex: Open <code>src/app/MyPage/SamplePage</code>. <em>(Example page that we've made in previous section)</em></li>
-                            <li>
-                              Import component form component library<br />
-                              <pre><code class="language-js">import { SampleComponent } from 'enl-components;</code></pre>
-                            </li>
-                            <li>
-                              Then use it inside render function<br />
-                              <pre><code class="language-js">render() {
-  return (
-    &lt;SampleComponent /&gt;
-  );
-}
-                            </code></pre>
-                                </li>
-                                <li>
-                                  Here's complete code <br />
-                                  <pre><code class="language-js">// file: app/containers/MyPage/SamplePage.js
-
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { PapperBlock, SampleComponent } from 'enl-components';
-
-class SamplePage extends React.Component {
-  render() {
-    const title = 'BookMyTix. Blank Page';
-    const description = 'BookMyTix';
-    return (
-      &lt;div&gt;
-        &lt;Helmet&gt;
-          &lt;title&gt;{title}&lt;/title&gt;
-          &lt;meta name="description" content={description} /&gt;
-          &lt;meta property="og:title" content={title} /&gt;
-          &lt;meta property="og:description" content={description} /&gt;
-          &lt;meta property="twitter:title" content={title} /&gt;
-          &lt;meta property="twitter:description" content={description} /&gt;
-        &lt;/Helmet&gt;
-        &lt;PapperBlock title="Blank Page" desc="Some text description"&gt;
-          &lt;SampleComponent /&gt;
-        &lt;/PapperBlock&gt;
-      &lt;/div&gt;
-    );
-  }
-}
-
-export default SamplePage;
-
-</code></pre>
-                                </li>
-                                <li>Then you can check the result at <a href="http://localhost:3000/mypage/sample-page">http://localhost:3000/mypage/sample-page</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- END -->
-				
-              <!-- INSTALL -->
-                <section class="row" id="crud">
-                    <div class="col-lg-10">
-                        <h1>CRUD App and Authentication</h1>
-                        <hr />
-                        <p>This is the CRUD flow to explain how the sample Pre-build apps works.</p>
-                        <p>
-                          Before we go through to the apps, first important thing to combine all reducer
-                        </p>
-                        <ul>
-                          <li>
-                            <strong>Combine reducers</strong><br />
-                            file: <code>app/redux/reducers.js</code>
-                          </li>
-                        </ul>
-                        <div class="part-categories">
-                          <div class="row">
-                            <div class="col-sm-3">
-                              <a href="code_flow/auth.html" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-lock"></i>
-                                </span>
-                                Authentication
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/todo.html" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-ok"></i>
-                                </span>
-                                To Do App
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/contact.html" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-user"></i>
-                                </span>
-                                Contact App
-                              </a>
-                            </div>
-                            <div class="col-sm-3">
-                              <a href="code_flow/email.html" target="_blank">
-                                <span class="icon">
-                                  <i class="glyphicon glyphicon-envelope"></i>
-                                </span>
-                                Email App
-                              </a>
-                            </div>
-                          </div>
+Container(
+  width: 180,
+  decoration: BoxDecoration(
+    color: colorScheme(context).surface,
+    borderRadius: ThemeRadius.medium,
+    boxShadow: [ThemeShade.shadeSoft(context)],
+  ),
+)
+                      </code></pre>
+                    </li>
+                  </ul>
+                  
+                  <br />
+                  <br />
+                  <br />
+                  <h4>Layout</h4>
+                  
+                  <p>This template has 2 layouts <strong>Home Layout</strong> and <strong>General Layout</strong></p>
+                  <ul>
+                    <li>
+                      <strong>Home Layout</strong> has Bottom Menu for main app navigation.
+                      <br />
+                      <div class="row">
+                        <div class="col-3">
+                          <img width="100%" src="images/home_layout.png" alt="layout" />
                         </div>
-                    </div>
-                </section>
-                <!-- END -->
-              
-				<!-- CODE -->
-                <section class="row" id="code">
-                    <div class="col-lg-12">
-                        <h1>Enable Direct Code Preview</h1>
-                        <hr />
-                        To make documenation easy and effective to access and implement, we attached source code in every component demos.
-                        We call it Direct Code Preview. This feature can be used in purchased product only (not available in demo).
-                        <br /><br />
-                        <ul>
-                          <li>Open config file <code>app/config/codePreview.js</code></li>
-                          <li>By default it set by false <pre><code class="language-js">// file: app/config/codePreview.js
+                        <div class="col-9">
+                          <pre><code class="language-js">
+    import 'package:flight_app/ui/layouts/home_layout.dart';
 
-export default {
-  enable: false
-};
-</code></pre></li>
-                          <li>Change to <code>enable: true</code>, to enabled direct code preview</li>
-                          <li>
-                            Test with any component demo, example in <a href="http://localhost:3000/app/tables/advanced-table" target="_blank">http://localhost:3000/app/tables/advanced-table</a>.
-                          </li>
-                          <li>
-                            Then at the bottom of every components you will see <strong>&lt;&gt; Show Code</strong> Button. Just click it.
-                          </li>
-                          <li>
-                            The source code of that components will show as well.
-                            <br /><br />
-                            <img src="images/guide_code.png" alt="theme" />
-                            <br /><br />
-                            <em>np: Basically this feature read source file directly, 
-                            so for every changes you make in component will also changes that preview.</em>
-                            <br />
-                          </li>
-                          <li>You can see through, copy and paste directly any component in front of your eyes.</li>
-                          <li>
-                            This feature use <strong>Source Reader</strong> component.
-                            You can find it in <code>src/app/components/SourceReader/SourceReader.js</code>.
-                            It was implemented in mostly component demos. 
-                          </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- END -->
-                              
-                <!-- ESLINT -->
-                <section class="row" id="eslint">
-                    <div class="col-lg-10">
-                        <h1>Clean Code with Eslint</h1>
-                        <hr>
-                        Eslint is disabled by default. You can enable it to keep your code consistent and avoiding bug. <br>
-                        <strong><em>NOTE: By enable eslint the running app process at beginning will slower.</em></strong><br><br>
-                        Just follow this step to enable eslint<br>
-                        <ul>
-                          <li>Go to <code>internals/webpack/webpack.base.babel.js</code></li>
-                          <li>
-                            Just uncomment this code bellow
-                            <pre class=" language-js"><code class=" language-js"><span class="token comment">//  const ESLintPlugin = require('eslint-webpack-plugin');</span>
-plugins: options.plugins.concat([<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token comment">/*
-      Disabled eslint by default.
-      You can enable it to maintain and keep clean your code.
-      NOTE: By enable eslint running app process at beginning will slower
-    */</span>
-    <span class="token comment">//      new ESLintPlugin({</span>
-    <span class="token comment">//        extensions: 'js',</span>
-    <span class="token comment">//        exclude: 'node_modules',</span>
-    <span class="token comment">//        failOnWarning: true,</span>
-    <span class="token comment">//        failOnError: true,</span>
-    <span class="token comment">//        emitError: true,</span>
-    <span class="token comment">//        emitWarning: true,</span>
-    <span class="token comment">//      }),</span>
-<span class="token comment">});</span>
-    </code></pre>
-                          </li>
-                          <li>
-                            Then should become like this
-                            <pre class=" language-js"><code class=" language-js"><span class="token comment">const ESLintPlugin = require('eslint-webpack-plugin');</span>
-plugins: options.plugins.concat([<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token comment">/*
-      Disabled eslint by default.
-      You can enable it to maintain and keep clean your code.
-      NOTE: By enable eslint running app process at beginning will slower
-    */</span>
-  <span class="token comment">      new ESLintPlugin({</span>
-  <span class="token comment">        extensions: 'js',</span>
-  <span class="token comment">        exclude: 'node_modules',</span>
-  <span class="token comment">        failOnWarning: true,</span>
-  <span class="token comment">        failOnError: true,</span>
-  <span class="token comment">        emitError: true,</span>
-  <span class="token comment">        emitWarning: true,</span>
-  <span class="token comment">      }),</span>
-<span class="token comment">});</span>
-    </code></pre>
-                          </li>
-                          <li>
-                            Run the project <code>npm start</code>.<br>
-                            You will be notified with an error message if your code not clean or consistent.
-                            ESLint itself is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.<br>
-                            More about elint <a href="https://eslint.org/docs/user-guide/getting-started" target="_blank">https://eslint.org/docs/user-guide/getting-started</a>
-                          </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- END -->
+    GetPage(
+      name: AppLink.myTicket,
+      page: () => const HomeLayout(content: OrderList()),
+      transition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: pageTransitionDuration)
+    ),                      
+                          </code></pre>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <strong>General Layout</strong> doesn't have any additional widget, just blank layout with constraint <strong>maxWidth: 1024</strong> and <strong>minHeight: 480</strong>
+                      <br />
+                      <div class="row">
+                        <div class="col-3">
+                          <img width="100%" src="images/general_layout.png" alt="layout" />
+                        </div>
+                        <div class="col-9">
+                          <pre><code class="language-js">
+import 'package:flight_app/ui/layouts/general_layout.dart';
+
+GetPage(
+  name: AppLink.formSample,
+  page: () => const GeneralLayout(content: FormInputCollection()),
+),                   
+                      </code></pre>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </section>
+            <!-- END -->
               
-                <!-- GMAPS -->
-                <section id="gmaps">
-                  <div class="col-lg-10">
-                      <h1>Google Maps API Config</h1>
-                      <hr>
-                      <p>
-                        Google Maps Platform products are secured from unauthorized use by restricting API calls to those that provide proper authentication credentials. These credentials are in the form of an API key - a unique alphanumeric string that associates your Google billing account with your project, and with the specific API or SDK. For more details please check <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank">https://developers.google.com/maps/documentation/javascript/get-api-key</a>
-                      </p>
-                      <h4>Before you begin</h4>
-                      <p>Before you start using the Maps JavaScript API, you need a project with a billing account and the
-                      Maps JavaScript API enabled. To learn more, see <a href="https://developers.google.com/maps/documentation/javascript/cloud-setup" target="_blank" class="gc-analytics-event" data-category="GMPgetAPIKeyPage" data-label="body" data-action="linkClick">Set up in Cloud Console</a>.
-                      </p>
-                      <h4>Creating API keys</h4>
-                      <p>The API key is a unique identifier that authenticates requests associated with your project for
-                      usage and billing purposes. You must have at least one API key associated with your project.</p>
-                      <p>To create an API key:</p>
-                      <ol>
-                        <li>Go to the Google Maps Platform &gt; Credentials page. <a href="https://console.cloud.google.com/project/_/google/maps-apis/credentials" target="_blank">https://console.cloud.google.com/project/_/google/maps-apis/credentials</a></li>
-                        <li>On the Credentials page, click Create credentials &gt; API key. The API key created dialog displays your newly created API key.</li>
-                        <li>Click Close.The new API key is listed on the Credentials page under API keys.(Remember to restrict the API key before using it in production.)</li>
-                      </ol>
-                      <h4>Adding the API key to your request</h4>
-                      <p>You must include an API key with every Maps JavaScript API request. In the following example, replace YOUR_API_KEY with your API key.</p>
-                      <pre class="  language-markup"><code class="  language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">async</span> <span class="token attr-name">defer</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code></pre>
-                  </div>
-                </section>
-                <!-- END -->
+            <!-- FONTS AND COLOR -->
+            <section class="row" id="font">
+                <div class="col-lg-12">
+                    <h1>Font and Color</h1>
+                    <hr />
+                  
+                  <h4>Font</h4>
+                  <code>/lib/ui/themes/theme_text.dart</code>
+                  <p>Theme text is used for Typography styling</p>
+                  <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_text.dart';
+
+Column(children: {
+  Text('Title', style: style: ThemeText.title),
+  Text('Title2', style: style: ThemeText.title2),
+  Text('Subtitle', style: style: ThemeText.subtitle),
+  Text('Subtitl2', style: style: ThemeText.subtitle2),
+  Text('Paragraph', style: style: ThemeText.paragraph),
+  Text('Paragraph Bold', style: style: ThemeText.paragraphBold),
+  Text('Caption', style: style: ThemeText.caption),
+})
+                    </code></pre>
+                  <img src="images/font.png" alt="font" />
+                  <br />
+                  <br />
+                  
+                  <h4>Color</h4>
+                  <code>/lib/ui/themes/theme_palette.dart</code>
+                  <p>ThemePalette object is a color palette collection: <strong>primary, secondary, tertiary.</strong></p>
+                  <pre><code class="language-js">
+import 'package:flight_app/ui/themes/theme_palette.dart';
+
+Container(
+  height: 100,
+  padding: EdgeInsets.all(spacingUnit(2)),
+  decoration: BoxDecoration(
+    color: ThemePalette.primaryMain,
+  ),
+  child: const Text('Lorem ipsum dolor')
+),
+                    </code></pre>
+                  <br />
+                  <img src="images/color.png" alt="color" />
+                </div>
+            </section>
+            <!-- END -->
+				
               
-                <!-- FONTS -->
+                <!-- REFERENCE -->
                 <section id="reference">
                     <h1>External Reference</h1>
                     <p>Here's some external reference of library that we used</p> <br />
