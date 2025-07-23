@@ -1183,8 +1183,9 @@ img {
 }
 
 .sidebar-nav li.current > a{
-    color: #1a3b99;
-    background: #d4e0ff !important;
+    color: #000;
+    font-weight: bold;
+    background: #e1eaea !important;
 }
 
 .sidebar-nav li a:hover {
