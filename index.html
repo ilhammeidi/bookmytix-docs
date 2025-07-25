@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <title>Boxperia - Documentation</title>
+    <title>BookMyTix - Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
@@ -40,7 +40,7 @@
                 <li class="sidebar-brand">
                     <a href="#" class="logo text-center">
                         <img src="images/logo.png" alt="logo" />
-                        <h6>Boxperia</h6>
+                        <h6>BookMyTix</h6>
                     </a>
                 </li>
                 <li><h3>Welcome</h3></li>
@@ -48,7 +48,7 @@
                     <a href="#introduction" class="cur">Introduction</a>
                 </li>
                 <li>
-                    <a href="#what">What is Boxperia?</a>
+                    <a href="#what">What is BookMyTix?</a>
                 </li>
                 <li>
                     <a href="#feature">Feature</a>
@@ -104,7 +104,7 @@
                 </li>
             </ul>
 
-            <span class="copy">&copy; Copyright 2025 - Boxperia</span>
+            <span class="copy">&copy; Copyright 2025 - BookMyTix</span>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -116,15 +116,15 @@
                     <div class="col-lg-12">
                         <h1 class="title">Thank you for Purchasing </h1>
                         <br /><br />
-                        <h3>Boxperia - Flutter Booking App UI Kit</h3>
-                        <h4>Version 1.0.0</h4>
+                        <h3>BookMyTix - Flutter Flight Booking App UI Kit</h3>
+                        <h4>Version 1.0.1</h4>
                         <hr />
                         <ul>
                             <li>
-                                Created : 25 Jul 2025
+                                Created : 25 Apr 2025
                             </li>
                             <li>
-                                Latest Update : 25 Jul 2025
+                                Latest Update : 5 May 2025
                             </li>
                         </ul>
                     </div>
@@ -134,21 +134,20 @@
                 <!-- WHAT -->
                 <section class="row" id="what">
                     <div class="col-lg-10">
-                        <h1>What is Boxperia?</h1>
+                        <h1>What is BookMyTix?</h1>
                         <hr />
                         <img src="images/banner.jpg" alt="banner" class="img-thumbnail" />
                         <br /><br />
                         <article>
                             <p>
-                                <strong>Boxperia</strong> is A versatile and modern Flutter UI template built for hotel, homestay, and co-working space booking applications. 
-                                Whether you're creating a travel platform, rental service, or workspace reservation system, this template provides a solid foundation with intuitive design and scalable architecture.
-                                With a clean and user-friendly interface, this template includes all the essential screens needed for a smooth booking experience — from search, filtering, booking schedule, and payments. 
-                                Built with Flutter, it ensures seamless performance on both Android, iOS devices and even mobile web.
+                                <strong>BookMyTix</strong> is a modern, high-quality UI kit designed to help developers quickly build cross-platform flight booking applications.
+                                With a clean and user-friendly interface, this template includes all the essential screens needed for a smooth booking experience — from flight search, filtering, and selection to passenger details, seat choice, and confirmation. 
+                                Built with Flutter, it ensures seamless performance on both Android and iOS devices, making it a perfect solution for travel agencies, airline companies, or travel startups.
                             <p>
                                 <strong>What's Inside?</strong><br />
                                 This template features a fully customizable design, responsive layouts, dark and light mode support, and reusable components to speed up development.
                                 Whether you're creating a full-featured airline app or a simple travel booking platform, this Flutter template provides a strong foundation with clean code and well-organized structure.
-                                Start your travel app project with confidence and deliver a polished, professional user experience.
+                              Start your travel app project with confidence and deliver a polished, professional user experience.
                             </p>
                         </article>
                     </div>
@@ -168,10 +167,10 @@
                                 <strong>Premium designs</strong>. Simple and elegant theme color along with dark and light mode
                             </li>
                             <li>
-                                <strong>50+ Screens with 150+ Widgets</strong> Ready-to-use UI screens, reusable and easy to customized.
+                                <strong>40+ Screens with 100+ Widgets</strong> Ready-to-use UI screens, reusable and easy to customized.
                             </li>
                             <li>
-                              <strong>Various sample screens</strong> Home, Hotel, Homestay, Co-Working Space Booking, Payment, and many more.
+                              <strong>Various sample screens</strong> Home, Flights, Booking, Payment, and many more.
                             </li>
                             <li>
                                 <strong>Responsive design</strong> Support tablet screen
@@ -203,142 +202,114 @@
                         <hr />
                       <div class="directory-tree">
                           <pre>
-booking_app                          
+flight_app                          
   ├── README.md
   ├── analysis_options.yaml
   ├── android
-  ├── assets
-  │   ├── fonts
-  │   └── images
-  ├── devtools_options.yaml
+  ├── assets          # FONTS AND STATIC LOCAL IMAGES LIKE ILLUSTRATIONS, BANNERS, AND LOGOS
+  │   ├── fonts
+  │   └── images
   ├── ios
-  ├── lib
-  │   ├── app
-  │   │   ├── app_link.dart
-  │   │   ├── app_routes.dart
-  │   │   ├── routes_auth.dart
-  │   │   ├── routes_homestay.dart
-  │   │   ├── routes_hotel.dart
-  │   │   ├── routes_payment.dart
-  │   │   ├── routes_profile.dart
-  │   │   ├── routes_ui_collection.dart
-  │   │   └── routes_workspace.dart
-  │   ├── constants
-  │   │   ├── amenity_const.dart
-  │   │   ├── app_const.dart
-  │   │   ├── booking_status.dart
-  │   │   ├── img_api.dart
-  │   │   ├── img_api_live.dart
-  │   │   └── regulation_const.dart
-  │   ├── main.dart
-  │   ├── models
-  │   │   ├── amenity.dart
-  │   │   ├── booking_homestay.dart
-  │   │   ├── booking_hotel.dart
-  │   │   ├── booking_workspace.dart
-  │   │   ├── category.dart
-  │   │   ├── chat.dart
-  │   │   ├── city.dart
-  │   │   ├── company.dart
-  │   │   ├── faq.dart
-  │   │   ├── general_list.dart
-  │   │   ├── homestay.dart
-  │   │   ├── hotel.dart
-  │   │   ├── hotel_room.dart
-  │   │   ├── list_item.dart
-  │   │   ├── news.dart
-  │   │   ├── notification.dart
-  │   │   ├── promo.dart
-  │   │   ├── rating.dart
-  │   │   ├── reward.dart
-  │   │   ├── reward_history.dart
-  │   │   ├── room_package.dart
-  │   │   ├── user.dart
-  │   │   ├── voucher.dart
-  │   │   ├── working_room.dart
-  │   │   └── workspace.dart
-  │   ├── screens
-  │   │   ├── auth
-  │   │   ├── booking
-  │   │   ├── explore
-  │   │   ├── home.dart
-  │   │   ├── homestay
-  │   │   ├── hotel
-  │   │   ├── intro
-  │   │   ├── messages
-  │   │   ├── not_found.dart
-  │   │   ├── payment
-  │   │   ├── profile
-  │   │   ├── promo
-  │   │   ├── review
-  │   │   ├── sample_ui
-  │   │   ├── search
-  │   │   └── workspace
-  │   ├── ui
-  │   │   ├── layouts
-  │   │   └── themes
-  │   ├── utils
-  │   │   ├── animated_slide_horizontal.dart
-  │   │   ├── bottom_draggable_sheet.dart
-  │   │   ├── check_platforms.dart
-  │   │   ├── col_row.dart
-  │   │   ├── color_type.dart
-  │   │   ├── confirm_dialog.dart
-  │   │   ├── custom_tooltip.dart
-  │   │   ├── expanded_section.dart
-  │   │   ├── gallery_viewer.dart
-  │   │   ├── grabber_icon.dart
-  │   │   ├── image_viewer.dart
-  │   │   ├── no_data.dart
-  │   │   ├── picker.dart
-  │   │   ├── placeholder.dart
-  │   │   ├── push_screen.dart
-  │   │   └── shimmer_preloader.dart
-  │   └── widgets
-  │       ├── action_header
-  │       ├── alert_info
-  │       ├── app_button
-  │       ├── app_input
-  │       ├── booking
-  │       ├── bottom_nav
-  │       ├── cards
-  │       ├── chat
-  │       ├── counter
-  │       ├── decorations
-  │       ├── details
-  │       ├── explore
-  │       ├── filter
-  │       ├── gallery
-  │       ├── home_screen
-  │       ├── homestay
-  │       ├── hotel
-  │       ├── notifications
-  │       ├── payment
-  │       ├── pricing
-  │       ├── profile
-  │       ├── promo
-  │       ├── review
-  │       ├── search
-  │       ├── settings
-  │       ├── stepper
-  │       ├── tab_menu
-  │       ├── title
-  │       ├── user
-  │       └── workspace
+  ├── lib    # THE MAIN FLUTTER SOURCE
+  │   ├── app         # HANDLE APP ROUTING FOR EACH SCREEN CATEGORY
+  │   │   ├── app_link.dart
+  │   │   ├── app_routes.dart
+  │   │   ├── routes_auth.dart
+  │   │   ├── routes_booking.dart
+  │   │   ├── routes_flight.dart
+  │   │   ├── routes_payment.dart
+  │   │   ├── routes_profile.dart
+  │   │   └── routes_ui_collection.dart
+  │   ├── constants   # CONSTANT VARIABLES FOR IMAGES, APP NAME, AND ALSO SAMPLE DUMMY DATA
+  │   │   ├── dummy_api.dart
+  │   │   └── img_api.dart
+  │   ├── main.dart
+  │   ├── models      # OBJECT STRUCTURE AND DUMMY DATA COLLECTION
+  │   │   ├── airport.dart
+  │   │   ├── booking.dart
+  │   │   ├── category.dart
+  │   │   ├── chat.dart
+  │   │   ├── city.dart
+  │   │   ├── company.dart
+  │   │   ├── faq.dart
+  │   │   ├── flight_package.dart
+  │   │   ├── flight_route.dart
+  │   │   ├── general_list.dart
+  │   │   ├── list_item.dart
+  │   │   ├── news.dart
+  │   │   ├── notification.dart
+  │   │   ├── plane.dart
+  │   │   ├── promo.dart
+  │   │   ├── rating.dart
+  │   │   ├── reward.dart
+  │   │   ├── rewards_history.dart
+  │   │   ├── transaction.dart
+  │   │   ├── trip.dart
+  │   │   ├── user.dart
+  │   │   └── voucher.dart
+  │   ├── screens       # APP SCREENS AS INDIVIDUAL PAGES OR VIEWS. IT'S CONTAIN RELATED WIDGETS
+  │   │   ├── auth
+  │   │   ├── booking
+  │   │   ├── explore
+  │   │   ├── flight
+  │   │   ├── home.dart
+  │   │   ├── intro
+  │   │   ├── messages
+  │   │   ├── not_found.dart
+  │   │   ├── orders
+  │   │   ├── payment
+  │   │   ├── profile
+  │   │   ├── promo
+  │   │   ├── sample_ui
+  │   │   └── search
+  │   ├── ui              # APP LAYOUT AND THEMING LIKE COLORS, TYPOGRAPHY, AND GLOBAL STYLE
+  │   │   ├── layouts
+  │   │   └── themes
+  │   ├── utils           # FLUTTER UTILITIES AND HELPERS FUNCTIONS
+  │   │   ├── animated_slide_horizontal.dart
+  │   │   ├── bottom_draggable_sheet.dart
+  │   │   ├── check_platforms.dart
+  │   │   ├── col_row.dart
+  │   │   ├── custom_tooltip.dart
+  │   │   ├── expanded_section.dart
+  │   │   ├── gallery_viewer.dart
+  │   │   ├── grabber_icon.dart
+  │   │   ├── image_viewer.dart
+  │   │   ├── no_data.dart
+  │   │   ├── picker.dart
+  │   │   ├── placeholder.dart
+  │   │   ├── push_screen.dart
+  │   │   └── shimmer_preloader.dart
+  │   └── widgets           # FLUTTER WIDGET COLLECTION
+  │       ├── action_header
+  │       ├── alert_info
+  │       ├── app_button
+  │       ├── app_input
+  │       ├── booking
+  │       ├── bottom_nav
+  │       ├── cards
+  │       ├── chat
+  │       ├── counter
+  │       ├── decorations
+  │       ├── explore
+  │       ├── flight
+  │       ├── home
+  │       ├── notifications
+  │       ├── payment
+  │       ├── profile
+  │       ├── promo
+  │       ├── review
+  │       ├── search_filter
+  │       ├── settings
+  │       ├── stepper
+  │       ├── tab_menu
+  │       ├── title
+  │       └── user
   ├── linux
   ├── macos
   ├── pubspec.lock
   ├── pubspec.yaml
   ├── web
-  │   ├── favicon.png
-  │   ├── icons
-  │   │   ├── Icon-192.png
-  │   │   ├── Icon-512.png
-  │   │   ├── Icon-maskable-192.png
-  │   │   └── Icon-maskable-512.png
-  │   ├── index.html
-  │   ├── loading.gif
-  │   └── manifest.json
   └── windows
                           </pre>
                       </div>
@@ -1193,7 +1164,7 @@ booking_app
                         <hr />
                         <h3>Install Dependencies</h3>
                         <br />
-                        Boxperia is built on <a href="https://flutter.dev/" target="_blank">Flutter</a>. To begin, it’s essential to verify that your Flutter and Integrated Development Environment (IDE) setup has been configured accurately
+                        BookMyTix is built on <a href="https://flutter.dev/" target="_blank">Flutter</a>. To begin, it’s essential to verify that your Flutter and Integrated Development Environment (IDE) setup has been configured accurately
 						<ul>
                           <li>Connect to the internet</li>
                           <li>Execute the command <kbd>flutter doctor</kbd> in your terminal. If any issues arise during this process, make sure to address and resolve them promptly.</li>
@@ -1248,7 +1219,7 @@ booking_app
                             Run the following command to build the APK 
                             <pre class="language-js"><code class="language-js">flutter build apk</code></pre>
                           </li>
-                          <li>Wait until finish. And the APK built result will be placed in <code>build/app/outputs/flutter-apk/app-release.apk</code></li>
+                          <li>Wait until finish. And the APK built result will be placed in<code>build/app/outputs/flutter-apk/app-release.apk</code></li>
                           <li>
                             This command will compile your Flutter code and generate the APK file. You can find the APK in the build/app/outputs/flutter-apk directory inside your project folder. The APK file will be named something like app-release.apk or app-debug.apk.
                           </li>
@@ -1528,7 +1499,7 @@ Expand Signing, then Select Team
                             <pre class="language-js"><code class="language-js">// Project
 Company branding = Company(
   id: '1',
-  name: 'Booking App',
+  name: 'Flight App',
   // rest code
 );</code></pre>
                           </li>
@@ -1647,7 +1618,7 @@ class MyWidget extends StatelessWidget {
 // lib/screens/my_screen.dart
 
 import 'package:flutter/material.dart';
-import 'package:booking_app/widgets/my_widget.dart';
+import 'package:flight_app/widgets/my_widget.dart';
 
 class MyScreen extends StatelessWidget {
   const MyScreen({super.key});
@@ -1669,7 +1640,7 @@ class MyScreen extends StatelessWidget {
                       Then add new routing to <code>MyScreen</code> with <code>'/myscreen'</code> path
                       <pre class="language-js">
                         <code class="language-js">
-import 'package:booking_app/screens/my_screen.dart';
+import 'package:flight_app/screens/my_screen.dart';
 
 final List&lt;GetPage&gt; appRoutes = [
   GetPage(
@@ -1716,7 +1687,7 @@ FilledButton(
                   
                     <p>Theme Data can handle dynamic color base on Dark on Light Mode Device. All Theme Data values, can be accessed from <code>/lib/ui/themes/theme_palette.dart</code> with <code>colorScheme(context)</code></p>
                     <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_palette.dart';
+import 'package:flight_app/ui/themes/theme_palette.dart';
 
 Container(
   height: 100,
@@ -1735,7 +1706,7 @@ Container(
                   <code>/lib/ui/themes/theme_button.dart</code>
                   <p>This is a global styling for variant buttons style including sizes and colors</p>
                   <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_button.dart';
+import 'package:flight_app/ui/themes/theme_button.dart';
 
 FilledButton(
   onPressed: () {},
@@ -1754,7 +1725,7 @@ FilledButton(
                     <li>
                       <p><strong>Spacing unit uses</strong> for padding, margin, and other spacing to make ui consistent. The spacing unit base on 8px, that mean if you use <code>spacingUnit(3)</code> it's equal <strong>24px</strong></p>
                       <pre><code class="language-js">
-    import 'package:booking_app/ui/themes/theme_spacing.dart';
+    import 'package:flight_app/ui/themes/theme_spacing.dart';
 
     Container(
       height: 100,
@@ -1772,7 +1743,7 @@ FilledButton(
                         <li><code>VSpaceBig()</code>: 48px</li>
                       </ul>
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_spacing.dart';
+import 'package:flight_app/ui/themes/theme_spacing.dart';
 
 Column(
   children: [
@@ -1807,7 +1778,7 @@ class ThemeSize {
                       <br />
                       <p>Example usage:</p>
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_breakpoints.dart';
+import 'package:flight_app/ui/themes/theme_breakpoints.dart';
 
 ConstrainedBox(
   constraints: BoxConstraints(
@@ -1820,7 +1791,7 @@ ConstrainedBox(
                       <strong>ThemeBreakpoints</strong>: This class is used to check screen size. It has 2 type, <strong>up</strong> to check minimum size of screen and <strong>down</strong> to check maximum size of screen.
                       In this template mostly using <strong>up</strong> for <em>Mobile First Responsive</em>.
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_breakpoints.dart'; 
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
 
 Container(
   height: ThemeBreakpoints.mdUp(context) ? 280 : 320, 
@@ -1831,7 +1802,7 @@ Container(
                       <strong>ThemeConstraint</strong>: This class similiar like ThemeBreakpoints, but it has <code>constraint</code> parameter.
                       You can use it with <code>LayoutBuilder</code> to get and set the <code>constraint</code> value.
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_breakpoints.dart'; 
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
 
 LayoutBuilder(
   builder: (context, constraints) {
@@ -1846,7 +1817,7 @@ LayoutBuilder(
                       <strong>ThemeConstraint</strong>: This class similiar like ThemeBreakpoints, but it has <code>constraint</code> parameter.
                       You can use it with <code>LayoutBuilder</code> to get and set the <code>constraint</code> value.
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_breakpoints.dart'; 
+import 'package:flight_app/ui/themes/theme_breakpoints.dart'; 
 
 LayoutBuilder(
   builder: (context, constraints) {
@@ -1871,7 +1842,7 @@ LayoutBuilder(
                     <li>
                       <strong>Theme Radius</strong> is a <code>BorderRadiusGeomentry</code> using <code>BorderRadius.circular</code> which has same radius value on each corner
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_radius.dart';
+import 'package:flight_app/ui/themes/theme_radius.dart';
 
 Container(
   decoration: BoxDecoration(
@@ -1884,7 +1855,7 @@ Container(
                     <li>
                       <strong>Theme Shadow</strong> is the global style for shadow <code>shadeSoft</code>, <code>shadeMedium</code>, and <code>shadeHard</code>
                       <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_shadow.dart';                      
+import 'package:flight_app/ui/themes/theme_shadow.dart';                      
 
 Container(
   width: 180,
@@ -1914,7 +1885,7 @@ Container(
                         </div>
                         <div class="col-9">
                           <pre><code class="language-js">
-    import 'package:booking_app/ui/layouts/home_layout.dart';
+    import 'package:flight_app/ui/layouts/home_layout.dart';
 
     GetPage(
       name: AppLink.myTicket,
@@ -1935,7 +1906,7 @@ Container(
                         </div>
                         <div class="col-9">
                           <pre><code class="language-js">
-import 'package:booking_app/ui/layouts/general_layout.dart';
+import 'package:flight_app/ui/layouts/general_layout.dart';
 
 GetPage(
   name: AppLink.formSample,
@@ -1960,7 +1931,7 @@ GetPage(
                   <code>/lib/ui/themes/theme_text.dart</code>
                   <p>Theme text is used for Typography styling</p>
                   <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_text.dart';
+import 'package:flight_app/ui/themes/theme_text.dart';
 
 Column(children: {
   Text('Title', style: style: ThemeText.title),
@@ -1980,7 +1951,7 @@ Column(children: {
                   <code>/lib/ui/themes/theme_palette.dart</code>
                   <p>ThemePalette object is a color palette collection: <strong>primary, secondary, tertiary.</strong></p>
                   <pre><code class="language-js">
-import 'package:booking_app/ui/themes/theme_palette.dart';
+import 'package:flight_app/ui/themes/theme_palette.dart';
 
 Container(
   height: 100,
@@ -2054,7 +2025,7 @@ Container(
                         <hr />
                         <article>
                             <strong>Fonts :</strong><br/>
-                            Open Sans<br /><br />
+                            Ubuntu<br /><br />
                             <strong>Preview Images Used</strong> 
                             <br />
                             <a href="http://unsplash.com/" target="_blank">Unsplash</a><br />
@@ -2215,7 +2186,7 @@ Container(
                             <thead>
                               <tr>
                                 <th>
-                                    <strong>Version 1.0.0 – 25 Jul, 2025</strong>
+                                    <strong>Version 1.0.1 – 5 May, 2025</strong>
                                 </th>
                               </tr>
                             </thead>
@@ -2223,6 +2194,22 @@ Container(
                                 <tr>
                                   <td>
                                       Add splash screen for web version
+                                  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped log">
+                            <thead>
+                              <tr>
+                                <th>
+                                    <strong>Version 1.0 – 25 Apr, 2025</strong>
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <td>
+                                      BookMyTix released
                                   </td>
                                 </tr>
                             </tbody>

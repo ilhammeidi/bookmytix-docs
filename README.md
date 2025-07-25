@@ -1,2 +1,2 @@
-# bookmytix-docs
-BookMyTix Documentation
+# enlite-docs
+Enlite Documentation
